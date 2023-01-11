@@ -123,3 +123,9 @@ function totalPrice() {
     document.getElementById("totalAmount").innerHTML = "$" + sum;
     document.getElementById("hidePriceTotal").innerHTML = sum;
 }
+
+function refresher(){
+    localStorage.clear();
+    window.location.reload();
+}
+
