@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,400;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+    body{
+        height: 1000;
+        
+    }
+    /* eto po mam inayos ko lang po ng kunti sa nav kayo nalang po magtapos
+
+    /* .navbar{
+        background-color: #f5cac2;
+        height: 60px;
+    }
+
+    .myLogo{
+        width: ;
+    }
+
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        display: inline-block;
+
+    }
+
+    .navbar li img{
+        width: 20px;
+    }
+
+    .navbar img{
+        width: 50px;
+    } */
+
+
+    .text{
+        margin-left: 80px;
+        margin-top: 300px;
+        text-align: left;
+    }
+
+    .text h4{
+        color: #ed7966;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .text h1 {
+        font-size: 50px;
+        font-family:'Kanit', sans-serif;
+        text-transform: uppercase;
+        color: rgb(0, 0, 0);
+    }
+
+    .text p {
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        color: #ed7966;
+    }
+
+    .logo{
+        padding-top: 40px;
+        margin-left: 180px;
+    }
+
+    .btn{
+        cursor: pointer;
+        letter-spacing: 4px;
+        box-shadow: 10px 5px 40px #ed7966;
+        color: #ed7966;
+    }
+    
+
+    
