@@ -4,186 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Womens Clothing</title>
+    <title>Mens Clothing</title>
     <link rel="stylesheet" href="/public/style/bootstrap.css">
+    <link rel="stylesheet" href="/public/style/style.css">
     <link rel="stylesheet" href="/public/style/shopstyle.css">
 </head>
 <body>
-    <!-- Main Content -->
-<main>
+
+<!-- Main Content -->
+<main class="d-flex">
     <div class="container">
-<!-- Item Collection 1 -->
-            <div class="container-lg">
-                <div class="d-md-flex justify-content-evenly">
-                    <!-- Items 1 -->
-                            <div class="shopcard card col-4 m-3">
-                            <img src="/public/image/clothing/WomensShirt.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title" id="itemName">Crop Tops</h5>
-                                    <p class="card-text text-danger">$199</p>
-                                    <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                    <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                    <!-- Items 2 -->
-                    <div class="shopcard card col-4 m-3">
-                        <img src="/public/image/clothing/WomensSando.jpg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title" id="itemName">White Sando</h5>
-                                <p class="card-text text-danger">$149</p>
-                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- Items 3 -->
-                    <div class="shopcard card col-4 m-3">
-                        <img src="/public/image/clothing/WomensTee.jpg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title" id="itemName">Beigh Tshirt</h5>
-                                <p class="card-text text-danger">$159</p>
-                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- Items 4 -->
-                    <div class="shopcard card col-4 m-3">
-                        <img src="/public/image/clothing/Strappy.jpg" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Strappy</h5>
-                            <p class="card-text text-danger">$160</p>
-                            <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                            <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                        </div>
-                    </div>
+        <!-- Item Collection -->
+        <div class="container d-flex justify-content-md-center p-5 m-2">
+            
+                <div class="card m-2" id="itemNo1">
+                    <img src="/public/image/clothing/Dress2.jpg" alt="">
+                    <div class="title card-title text-center">Dress</div>
+                    <div class="text-center text-danger"><span>99</span></div>
+                    <button onclick="addtoModule(itemNo1)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
                 </div>
+                <div class="card m-2" id="itemNo2">
+                    <img src="/public/image/clothing/Pink.jpg" alt="">
+                    <div class="title card-title text-center">Pink Short</div>
+                    <div class="text-center text-danger"><span>59</span></div>
+                    <button onclick="addtoModule(itemNo2)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+                </div>
+                <div class="card m-2" id="itemNo3">
+                    <img src="/public/image/clothing/WomensSando.jpg" alt="">
+                    <div class="title card-title text-center">Womens Sando</div>
+                    <div class="text-center text-danger"><span>79</span></div>
+                    <button onclick="addtoModule(itemNo3)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+                </div>
+        </div>
+        <!-- Item Collection -->
+        <div class="container d-flex justify-content-md-center p-5 m-2">
+            
+            <div class="card m-2" id="itemNo4">
+                <img src="/public/image/clothing/Strappy.jpg" alt="">
+                <div class="title card-title text-center">Strappy</div>
+                <div class="text-center text-danger"><span>49</span></div>
+                <button onclick="addtoModule(itemNo4)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
             </div>
-<!-- Item Collection 2 -->    
-            <div class="container-lg">                 
-                                    <div class="d-md-flex justify-content-evenly">
-                                        <!-- Items 1 -->
-                                        <div class="shopcard card col-4 m-3">
-                                            <img src="/public/image/clothing/Shorts.jpg" alt="">
-                                                <div class="card-body">
-                                                    <h5 class="card-title" id="itemName">Shorts</h5>
-                                                    <p class="card-text text-danger">$199</p>
-                                                    <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                                    <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <!-- Items 2 -->
-                                        <div class="shopcard card col-4 m-3">
-                                            <img src="/public/image/clothing/Summer.jpg" alt="">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Summer Shorts</h5>
-                                                <p class="card-text text-danger">$23</p>
-                                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Items 3 -->
-                                        <div class="shopcard card col-4 m-3">
-                                            <img src="/public/image/clothing/Pink.jpg" alt="">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pink Short</h5>
-                                                <p class="card-text text-danger">$25</p>
-                                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Items 4 -->
-                                        <div class="shopcard card col-4 m-3">
-                                            <img src="/public/image/clothing/Simple.jpg" alt="">
-                                            <div class="card-body ">
-                                                <h5 class="card-title">White Short</h5>
-                                                <p class="card-text text-danger">$99</p>
-                                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
+            <div class="card m-2" id="itemNo5">
+                <img src="/public/image/clothing/Summer.jpg" alt="">
+                <div class="title card-title text-center">Summer Short</div>
+                <div class="text-center text-danger"><span>69</span></div>
+                <button onclick="addtoModule(itemNo5)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
             </div>
-<!-- Item Collection 3 -->    
-            <div class="container-lg">
-                <div class="d-md-flex justify-content-evenly">
-                    <!-- Items 1 -->
-                    <div class="shopcard card col-4 m-3">
-                       
-                        <img src="/public/image/clothing/Sweater.jpg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Sweater</h5>
-                                <p class="card-text text-danger">$500</p>
-                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                                        <!-- Items 2 -->
-                    <div class="shopcard card col-4 m-3">
-                        <img src="/public/image/clothing/Jacket.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Jacket</h5>
-                                    <p class="card-text text-danger">$500</p>
-                                    <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                    <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                                        <!-- Items 3 -->
-                    <div class="shopcard card col-4 m-3">
-                        <img src="/public/image/clothing/Dress.jpg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Dress</h5>
-                                <p class="card-text text-danger">$500</p>
-                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>                    
-                                        <!-- Items 4 -->
-                    <div class="shopcard card col-4 m-3">
-                        <img src="/public/image/clothing/Dress2.jpg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Plain Dress</h5>
-                                <p class="card-text text-danger">$500</p>
-                                <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
-                                <button onclick="viewItemsBtn()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="card m-2" id="itemNo6">
+                <img src="/public/image/clothing/Sweater.jpg" alt="">
+                <div class="title card-title text-center">Longsleeves</div>
+                <div class="text-center text-danger"><span>99</span></div>
+                <button onclick="addtoModule(itemNo6)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
             </div>
+    </div>
+
+
+
+
+    </div>
+    
+    <!-- Cart -->
+    <div class="cart" id="cart">
+        <div><h1 class="text-center">Cart</h1></div>
+        <hr>
+        <div class="cartItems d-flex justify-content-center row" id="cartItems"></div>
+        <div class="text-center">Total:</div>
+        <div class="text-center" id="totalAmount1"></div>
+        <div class="d-flex justify-content-center p-5 m-5"><button onclick="refresher()" type="button" class="btn btn-dark">Remove All</button></div>
     </div>
 </main>
 
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="buyNowModalLabel"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="d-flex">
-                <div class="modal-body">
-                    <h1 id="itemNameHeader">Hello World</h1>
+    <!-- Modal -->
+    <div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buyNowModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buy Now</button>
+                <div>
+                    <div class="modal-body d-flex" id="item">
+                        <div id="imgModule"><img id="mainImgModule" src="#" alt="#"></div>
+                        <div id="itemsDetails">
+                            <p>Quantity:</p>
+                            <input id="itemQuantity" type="number" value="1" onchange="totalPrice()">
+                            <p>Price:</p>
+                            <div class="fontSize text-center" id="priceID">price</div>
+                            <hr>
+                            <!-- Hidden Span -->
+                            <span id="hidePrice" class="d-none"></span>
+                            <span id="hidePriceTotal" class="d-none" ></span>
+                            <span>Total Amount:</span>
+                            <span id="totalAmount"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button onclick="addtocart(item)" type="button" class="btn btn-success" data-bs-dismiss="modal">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 <script src="/public/js/bootstrap.bundle.min.js"></script>
 <script src="/public/js/shopFuntionality.js"></script>
