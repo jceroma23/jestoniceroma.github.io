@@ -14,33 +14,34 @@
 
     <!-- GOOGLE FONTS palitan nyo nalang kung ano the best font sa site naten thanks-->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public\style\bootstrap.min.css">
+    <link rel="stylesheet" href="public/style/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="header navbar navbar-expand-lg container-fluid">
+    <nav class="header navbar navbar-expand-md container-fluid">
         <div class="container d-flex justify-content-evenly">
-                <a class="nav-brand" href="/index.html">
-                <img class="logo" src="public/image/8.png" class="logo" alt="">
+                <a class="nav-brand" href="index.html">
+                    <img class="logo" src="public/image/8.png" class="logo" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menubar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span></button>
                
-                <div class="collapse navbar-collapse p-5" id="menubar">
-                        <ul class="navbar-nav" >
-                            <li><a class="btn btn-danger-opacity-50 text-secondary" href="/index.html" role="button">HOME</a>
-                            </li>
+                <div class="collapse navbar-collapse d-flex justify-content-center" id="menubar">
+                        <ul class="navbar-nav mt-2" >
                             <li>
-                                <div class="btn-group">
+                                <a class="btn btn-danger-opacity-50 text-secondary" href="/index.html" role="button">HOME</a>
+                            </li>
+                            
+                                <!-- <div class="btn-group">
                                     <button type="button" class="btn btn-danger-opacity-50 text-secondary" data-bs-toggle="modal" role="button" data-bs-target="#exampleModal">Shop</button>
                                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header bg-danger-opacity-50">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header bg-danger-opacity-50">
                                                         <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
+                                </div> -->
+                                <!-- <div class="modal-body">
                                 <table class="table fs-6 fw-light">
                                 <thead>
                                     <tr>
@@ -82,29 +83,29 @@
                                         <td><input type="text"></td>
                                     </tr>
                                     </tbody>
-                                    </table>
-                                </div>
-                                <div class="modal-footer">
+                                </table>
+                                </div> -->
+                                <!-- <div class="modal-footer">
                                     <button type="button" class="btn btn-danger-opacity-50" data-bs-dismiss="modal">Add to Cart</button>
                                     <button type="button" class="btn btn-danger-opacity-50">Place Order</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            <li>
-                <div class="dropdown">
-                <a class="btn btn-danger-opacity-50 text-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Address</a></li>
-                    <li><a class="dropdown-item" href="#">Contact</a></li>
-                    <li><a class="dropdown-item" href="#">About Us</a></li>
-                </ul>
+                                </div> -->
+                                <li>
+                                    <div class="dropdown">
+                                    <a class="btn btn-danger-opacity-50 text-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="public/pages/menshop.html">Male Clothing</a></li>
+                                        <li><a class="dropdown-item" href="public/pages/womenshop.html">Female Clothing</a></li>
+                                        
+                                    </ul>
+                                    </div>
+                                </li>
+                                <li><a class="btn btn-danger-opacity-50 text-secondary" href="login.html" role="button"><p>Login</p></a></li>
+                                <li><a class="btn btn-danger-opacity-50 text-secondary" href="signin.html" role="button"><p>Sign in</p></a></li>
+                                   
+                        </ul>        
                 </div>
-            </li>
-            <li><a class="btn btn-danger-opacity-50 text-secondary" href="login.html" role="button"><p>Login</p></a></li>
-            <li><a class="btn btn-danger-opacity-50 text-secondary" href="signin.html" role="button"><p>Sign in</p></a></li>
-            </ul>
-    
+        </div>
+        
 
 <!-- Nilipat ko lng ng folder bootstrap and naidelete and unnecessary -->
 <script src="public/js/bootstrap.bundle.min.js"></script>
