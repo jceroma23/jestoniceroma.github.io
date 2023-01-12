@@ -102,8 +102,83 @@
                 </ul>
                 </div>
             </li>
-            <li><a class="btn btn-danger-opacity-50 text-secondary" href="login.html" role="button"><p>Login</p></a></li>
-            <li><a class="btn btn-danger-opacity-50 text-secondary" href="signin.html" role="button"><p>Sign in</p></a></li>
+            <li>
+                <button type="button" class="btn btn-danger-opacity-50" data-bs-toggle="modal" data-bs-target="#Login">
+                    Login
+                   </button>
+                   <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                     <div class="modal-dialog">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                           <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
+                                   <form>
+                                      
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"placeholder="Enter Email">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"placeholder="Password">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"placeholder="Phone">Phone number</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-danger-opacity-50" data-bs-dismiss="modal">Submit</button>
+                           <button type="button" class="btn btn-danger-opacity-50">Close</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </li>
+                    <button type="button" class="btn btn-danger-opacity-50" data-bs-toggle="modal" data-bs-target="#Sign-in">
+                    Sign-in
+                    </button>
+                   <div class="modal fade" id="Sign-in" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                     <div class="modal-dialog">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                           <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
+                                   <form>
+                                       <div class="mb-3">
+                                           <label for="exampleInputPassword1" class="form-label" placeholder="Enter Fullname">Name</label>
+                                           <input type="password" class="form-control" id="exampleInputPassword1">
+                                         </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"placeholder="Enter Email">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"placeholder="Password">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"placeholder="Phone">Authentication Code</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-danger-opacity-50" data-bs-dismiss="modal">Submit</button>
+                           <button type="button" class="btn btn-danger-opacity-50">Close</button>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                </li>
+                
             </ul>
     
 
