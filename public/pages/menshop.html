@@ -6,11 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mens Clothing</title>
     <link rel="stylesheet" href="/public/style/bootstrap.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="stylesheet" href="/public/style/shopstyle.css">
 </head>
 <body>
-    <div class="container-fluid">
-        
+
+<!-- Main Content -->
+<main class="d-flex">
+    <div class="container">
+        <!-- Item Collection -->
+        <div class="container d-flex justify-content-md-center p-5 m-2">
+            
+                <div class="card m-2" id="itemNo1">
+                    <img src="/public/image/clothing/Dress2.jpg" alt="">
+                    <div class="title card-title text-center">Jacket</div>
+                    <div class="text-center text-danger"><span>500</span></div>
+                    <button onclick="addtoModule(itemNo1)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+                </div>
+                <div class="card m-2" id="itemNo2">
+                    <img src="/public/image/clothing/MensClothing.jpg" alt="">
+                    <div class="title card-title text-center">Jacket</div>
+                    <div class="text-center text-danger"><span>300</span></div>
+                    <button onclick="addtoModule(itemNo2)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+                </div>
+                <div class="card m-2" id="itemNo3">
+                    <img src="/public/image/clothing/Jacket.jpg" alt="">
+                    <div class="title card-title text-center">Jacket</div>
+                    <div class="text-center text-danger"><span>100</span></div>
+                    <button onclick="addtoModule(itemNo3)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+                </div>
+        </div>
+        <!-- Item Collection -->
+        <div class="container d-flex justify-content-md-center p-5 m-2">
+            
+            <div class="card m-2" id="itemNo4">
+                <img src="/public/image/clothing/Strappy.jpg" alt="">
+                <div class="title card-title text-center">Jacket</div>
+                <div class="text-center text-danger"><span>500</span></div>
+                <button onclick="addtoModule(itemNo4)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+            </div>
+            <div class="card m-2" id="itemNo5">
+                <img src="/public/image/clothing/Summer.jpg" alt="">
+                <div class="title card-title text-center">Jacket</div>
+                <div class="text-center text-danger"><span>300</span></div>
+                <button onclick="addtoModule(itemNo5)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+            </div>
+            <div class="card m-2" id="itemNo6">
+                <img src="/public/image/clothing/Sweater.jpg" alt="">
+                <div class="title card-title text-center">Jacket</div>
+                <div class="text-center text-danger"><span>100</span></div>
+                <button onclick="addtoModule(itemNo6)" class="btn btn-dark" type="button" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#buyNowModal" >Buy</button>
+            </div>
+    </div>
+
+
+
+
+    </div>
+    <!-- Cart -->
+    <div class="cart border border-1" id="cart">
+        <div><h1 class="text-center">Cart</h1></div>
+        <hr>
+        <div class="cartItems d-flex justify-content-center row" id="cartItems"></div>
+        <div class="text-center">Total:</div>
+        <div class="text-center" id="totalAmount1"></div>
+        <div class="d-flex justify-content-center p-5 m-5"><button onclick="refresher()" type="button" class="btn btn-dark">Remove All</button></div>
+    </div>
+</main>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buyNowModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div>
+                    <div class="modal-body d-flex" id="item">
+                        <div id="imgModule"><img id="mainImgModule" src="#" alt="#"></div>
+                        <div id="itemsDetails">
+                            <p>Quantity:</p>
+                            <input id="itemQuantity" type="number" value="1" onchange="totalPrice()">
+                            <p>Price:</p>
+                            <div class="fontSize text-center" id="priceID">price</div>
+                            <hr>
+                            <!-- Hidden Span -->
+                            <span id="hidePrice" class="d-none"></span>
+                            <span id="hidePriceTotal" class="d-none" ></span>
+                            <span>Total Amount:</span>
+                            <span id="totalAmount"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button onclick="addtocart(item)" type="button" class="btn btn-success" data-bs-dismiss="modal">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-<link rel="stylesheet" href="/public/js/bootstrap.bundle.min.js">
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/shopFuntionality.js"></script>
 </html>
