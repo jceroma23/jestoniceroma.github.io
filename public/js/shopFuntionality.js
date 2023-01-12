@@ -13,40 +13,19 @@ function addtocart(item) {
     //create new Image at cart
     var img = document.createElement('img');
     //set attribute of created image src is item divsion 1 (children 0) which img.
-    // img.setAttribute('src', item.children[0].currentSrc);
-    // img.setAttribute = document.getElementById("mainImgModule").getAttribute('src');
     img.setAttribute('src', document.getElementById("mainImgModule").getAttribute('src'));
     var title = document.createElement('div');
     title.innerText = document.getElementById('buyNowModalLabel').innerText; 
     title.setAttribute('class', 'text-center');
     //title.innerText = item.children[1].innerText;
     var price = document.createElement('div');
-    price.innerText = document.getElementById('totalAmount').innerText; 
-    //price.innerText = item.children[2].innerText;
-    //price.setAttribute('class', 'text-center');
-    //var select = document.createElement('span');
-    //price.append(select);
+    price.innerText = document.getElementById('totalAmount').innerText;
 //hidden
     var hiddenTotal = document.createElement('div');
     hiddenTotal.className = ('priceRow');
     //hiddenTotal.setAttribute('class', 'priceRow');
     hiddenTotal.innerText = parseInt(document.getElementById('hidePriceTotal').innerText);
-    //let cartRow = cartItemContainer
-//total Amount to be Payed
 
-    // let totalamountArr = [];
-    // totalamountArr.push(hiddenTotal);
-    //  let sum = totalamountArr.reduce((a, b) => a + b, 0);
-
-    //  var totalamount = document.createElement('div');
-    //  totalamount = sum;
-    
-    // //test
-    // var arrNumberDiv = document.createElement('div');
-    // arrNumberDiv.push(hiddenTotal);
-
-    
-//funtion for total amount
 let newPrice = hiddenTotal.innerText;
 let total = localStorage.getItem('cardPrice');
 
@@ -66,11 +45,6 @@ if(total != null){
     document.getElementById("totalAmount1").innerHTML = total;
 }
 
-
-
-
-
-
     var cartItems = document.getElementById('cartItems');
 //Display Output on Cart
     selectedItem.append(img);
@@ -79,12 +53,7 @@ if(total != null){
     selectedItem.append(hiddenTotal);
 //to Display Items on Cart
     cartItems.append(selectedItem);
-
-   
-
 // localStorage.setItem('cardPrice', hiddenTotal.innerText)
-
-
     // let cartItemContainer = document.getElementsByClassName('cart')[0];
     // let cartRows = cartItemContainer.getElementsByClassName('cartImg');
     // for(let i = 0; i < cartRows.length; i++){
