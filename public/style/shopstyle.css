@@ -33,3 +33,6 @@ img {
 .fontSize {
     font-size: 2em;
 }
+.priceRow {
+    display: none;
+}
