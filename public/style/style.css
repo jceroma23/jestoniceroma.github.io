@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+.nav-brand p{
+    height: 10%;
+    display: inline-block;
+    font-family:'Roboto', sans-serif;
+    padding-top: 20px;
+    box-shadow: 1 1 4 1;
+    text-decoration: none;
+} 
+.header{
+    background-color:#ebcade ;
+    width: 100%;
+    
+  }
+p{
+    color:rgb(94, 85, 85);
+    font-weight: 700;
+}
+.logo{
+    width: 20%;
+    margin-left: 10px;
+}
+.btn{
+    width: 100px;
+    height: 50px;
+    font-family:'Roboto', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,400;1,300&display=swap');
 * {
     margin: 0;
@@ -6,7 +50,7 @@
 
     body{
         height: 1000;
-        
+
     }
     /* eto po mam inayos ko lang po ng kunti sa nav kayo nalang po magtapos
 
@@ -78,3 +122,4 @@
     
 
     
+>>>>>>> 4a302ba8c8bfd0ecf29993cc395c9e741f81c593
