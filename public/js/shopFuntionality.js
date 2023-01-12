@@ -49,6 +49,7 @@ function addtocart(item) {
 //funtion for total amount
 let newPrice = hiddenTotal.innerText;
 let total = localStorage.getItem('cardPrice');
+
 if(total != null){
 //convert string to Numbers
     newPrice = parseInt(newPrice);
