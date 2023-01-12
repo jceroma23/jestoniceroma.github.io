@@ -1,57 +1,21 @@
-<<<<<<< HEAD
-.nav-brand p{
-    height: 10%;
-    display: inline-block;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,400;1,300&display=swap');
+* {
+    border-style: border-box;
+    margin: 0;
+    padding: 0;
     font-family:'Roboto', sans-serif;
-    padding-top: 20px;
-    box-shadow: 1 1 4 1;
-    text-decoration: none;
 } 
 .header{
-    background-color:#ebcade ;
-    width: 100%;
-    
+    background-color:#ebcade ; 
   }
 p{
     color:rgb(94, 85, 85);
     font-weight: 700;
 }
-.logo{
-    width: 20%;
-    margin-left: 10px;
+.logo {
+    width: 70px;
+    height: 30px;
 }
-.btn{
-    width: 100px;
-    height: 50px;
-    font-family:'Roboto', sans-serif;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,400;1,300&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-}
-
-    body{
-        height: 1000;
-
-    }
     /* eto po mam inayos ko lang po ng kunti sa nav kayo nalang po magtapos
 
     /* .navbar{
@@ -83,43 +47,25 @@ p{
     } */
 
 
-    .text{
-        margin-left: 80px;
-        margin-top: 300px;
-        text-align: left;
-    }
+    
 
-    .text h4{
+    /* .text h4{
         color: #ed7966;
         font-family: 'Kanit', sans-serif;
     }
-
     .text h1 {
-        font-size: 50px;
         font-family:'Kanit', sans-serif;
         text-transform: uppercase;
         color: rgb(0, 0, 0);
     }
-
     .text p {
         font-size: 20px;
         font-family: 'Kanit', sans-serif;
         text-transform: uppercase;
         color: #ed7966;
-    }
+    } */
 
-    .logo{
-        padding-top: 40px;
-        margin-left: 180px;
-    }
-
-    .btn{
-        cursor: pointer;
-        letter-spacing: 4px;
-        box-shadow: 10px 5px 40px #ed7966;
-        color: #ed7966;
-    }
+    
     
 
     
->>>>>>> 4a302ba8c8bfd0ecf29993cc395c9e741f81c593
