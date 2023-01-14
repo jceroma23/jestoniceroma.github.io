@@ -16,7 +16,7 @@
 .navBanner {
     background-color: #FAD3E7;
     color: antiquewhite;
-    box-shadow: 0px 5px 15px 5px #050505;
+    /* box-shadow: 0px 5px 15px 5px #050505; */
 }
 .logoBanner {
     height: 6rem;
@@ -55,3 +55,25 @@
   .dropdown-item:hover{
     background-color: #F273E6;
   }
+  .searchbtn {
+    background-color: #F4D9E7;
+  }
+  .searchbtn:hover{
+    background-color: #F273E6;
+  }
+  .NavSecond {
+    background-color: #EFA3C8;
+  }
+  .secondAnchorNav:hover {
+    background-color: #F273E6;
+  }
+  .secondNavSpan {
+    font-size: 2rem;
+    animation: color-change 2s infinite;
+  }
+    @keyframes color-change {
+      0% { color: rgb(240, 113, 113); }
+      50% { color: rgb(114, 114, 241); }
+      100% { color: rgb(179, 219, 70); }
+    }
+
