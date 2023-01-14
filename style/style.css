@@ -7,14 +7,17 @@
     font-family: 'Lato', sans-serif;
 }
 
+body{
+  background-color: #EEEEEE;
+}
 .banner {
-    background-color:#050505;
+    background-color:#FF8E9E;
     height: 30px;
-    color: #FAD3E7;
+    color: #FF597B;
     
 }
 .navBanner {
-    background-color: #FAD3E7;
+    background-color: #F9B5D0;
     color: antiquewhite;
     /* box-shadow: 0px 5px 15px 5px #050505; */
 }
@@ -25,7 +28,6 @@
 .logInIcon {
     color: #050505;
 }
-
 .carouselbtn {
     width: 30px;
 }
@@ -76,4 +78,9 @@
       50% { color: rgb(114, 114, 241); }
       100% { color: rgb(179, 219, 70); }
     }
-
+.NavSecond {
+  box-shadow: 0px 0px 20px 2px #050505;
+}
+.mainFooter {
+  background-color: #FF8E9E
+}
