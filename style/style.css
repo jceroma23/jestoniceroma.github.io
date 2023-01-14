@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    border-style: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.banner {
+    background-color:#050505;
+    height: 30px;
+    color: #FAD3E7;
+    
+}
+.navBanner {
+    background-color: #FAD3E7;
+    color: antiquewhite;
+    box-shadow: 0px 5px 15px 5px #050505;
+}
+.logoBanner {
+    height: 6rem;
+    width: 12rem;
+}
+.logInIcon {
+    color: #050505;
+}
+
+.carouselbtn {
+    width: 30px;
+}
+
+.carousel-indicators {
+    width: auto;
+  }
+
+  @media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-inner > .item.next,
+    .carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+    .carousel-inner > .item.prev,
+    .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  .dropdownColor{
+    background-color: #FAD3E7;
+    box-shadow: 0px 2px 2px 0px #050505;
+  }
+  .dropdown-item:hover{
+    background-color: #F273E6;
+  }
