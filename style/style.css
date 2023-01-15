@@ -93,10 +93,10 @@ body{
   background-color: #F273E6;
   font-weight: bold;
 }
-.sectiontitle {
+/* .sectiontitle {
   background-color: #EFA3C8;
   width: 9em;
-}
+} */
 .categoriesAnchor {
   border-color: #EFA3C8;
 }
@@ -118,12 +118,16 @@ body{
 .cardZoom {
   transition: transform .2s;
   /* border: 0.5px solid #050505; */
-  width: 20%;
-  max-height: 70%;
+  width: 220px;
+  max-height: 75%;
   font-size: 1em;
 }
 .cardZoom:hover {
   transform: scale(1.022);
+}
+.cardZoomMainParent{
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 .cardTitleOverride {
   font-size: 15px;
@@ -131,8 +135,6 @@ body{
 .imgCard{
   width: 100%;
 }
-
 .bannerImg{
-  
   height: 450px;
 }
