@@ -119,7 +119,7 @@ body{
   transition: transform .2s;
   /* border: 0.5px solid #050505; */
   width: 20%;
-  height: 50%;
+  max-height: 70%;
   font-size: 1em;
 }
 .cardZoom:hover {
