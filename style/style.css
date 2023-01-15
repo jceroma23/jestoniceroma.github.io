@@ -96,9 +96,9 @@ body{
   background-color: #EFA3C8;
   width: 9em;
 }
-/* .categoriesAnchor {
-  width: 20em;
-} */
+.categoriesAnchor {
+  border-color: #EFA3C8;
+}
 .categoriesAnchor:hover {
   background-color: #FF8E9E;
   font-size: 1em;
