@@ -9,6 +9,7 @@
 
 body{
   background-color: #EEEEEE;
+  font-size: 100%;
 }
 .banner {
     background-color:#FF8E9E;
@@ -109,3 +110,25 @@ body{
 .mainSection {
   font-size: 1em;
 }
+.categoriesImg{
+  width: 350px;
+  height: 350px;
+}
+/* Card Zoom In */
+.cardZoom {
+  transition: transform .2s;
+  /* border: 0.5px solid #050505; */
+  width: 20%;
+  height: 50%;
+  font-size: 1em;
+}
+.cardZoom:hover {
+  transform: scale(1.022);
+}
+.cardTitleOverride {
+  font-size: 15px;
+}
+.imgCard{
+  width: 100%;
+}
+
