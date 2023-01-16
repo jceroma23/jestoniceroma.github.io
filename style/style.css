@@ -27,8 +27,8 @@ body{
 .adsContainer {
   height: 90vh;
   min-width: 100%;
-  background-image: url("Images/alternateresize.jpg");
-  background-image: url("/Images/alternateresize.jpg");
+  background-image: url('alternateresize.jpg');
+  
 }
 .myButtons {
   max-width: 10em;
