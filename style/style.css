@@ -179,3 +179,7 @@ body{
 .pinkBorder {
   border: 1px solid #F273E6;
 }
+.imageCardContainer {
+  max-height: 70vh;
+ 
+}
