@@ -14,6 +14,7 @@
       {
         "marquee": "off"
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
