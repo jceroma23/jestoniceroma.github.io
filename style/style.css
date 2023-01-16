@@ -2,6 +2,7 @@
 
 * {
     border-style: border-box;
+    border: 0;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -9,21 +10,55 @@
 
 body{
   background-color: #EEEEEE;
-  font-size: 100%;
+  font-size: 10px;
 }
+
 .banner {
     background-color:#FF8E9E;
-    height: 30px;
+    max-height: 20px;
     color: #FF597B;
 }
 .navBanner {
     background-color: #F9B5D0;
     color: antiquewhite;
+    min-height: 50px;
     /* box-shadow: 0px 5px 15px 5px #050505; */
 }
+.adsContainer {
+  height: 90vh;
+  min-width: 100%;
+  background-image: url("/Images/alternateresize.jpg");
+}
+.myButtons {
+  max-width: 10em;
+  background-color:#EEEEEE;
+  font-weight: 700;
+}
+.myButtons:hover {
+  background-color:#FF597B;
+}
+.adsContainer h2{
+  font-weight: bold;
+}
+.fontCutomColorPink {
+  color: #FF597B;
+  text-shadow: 0px 2px 3px black;
+}
+.fontCutomColorWhite{
+  color: #EEEEEE;
+  text-shadow: 0px 2px 3px black;
+}
+.myButtonShopNow{
+  max-width: 10em;
+  background-color:#FF597B;
+  font-weight: bold;
+}
+.myButtonShopNow:hover{
+  background-color: #EEEEEE;
+}
 .logoBanner {
-    height: 6rem;
-    width: 12rem;
+    height: 3em;
+    width: 12em;
 }
 .logInIcon {
     color: #050505;
@@ -38,7 +73,7 @@ body{
 
 .carousel-indicators {
     width: auto;
-  }
+}
 
   /* @media all and (transform-3d), (-webkit-transform-3d) {
     .carousel-inner > .item.next,
@@ -137,4 +172,10 @@ body{
 }
 .bannerImg{
   height: 450px;
+}
+.defaultContainer {
+  min-height: 60vh;
+}
+.pinkBorder {
+  border: 1px solid #F273E6;
 }

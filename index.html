@@ -8,634 +8,271 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<!-- Header -->
-    <nav>
-        <div>
-            <div class="container-fluid banner d-flex justify-content-evenly">
-                <marquee behavior="alternate" direction="right">
-                    <span>Check our <strong>Spring & Summer</strong></span>
-                    <span><strong>50% off</strong> Grab Yours Now</span>
-                </marquee>
-            </div>
-            <div class="banner container-fluid d-flex justify-content-center d-lg-none d-md-none">
-                <p class="text-center"><strong>STRAWBERRYSTREET</strong></p>
-            </div>
-        </div>
-        <div class="navBanner navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <div class="mx-5">
-                    <a href="#"><img class="logoBanner d-none d-lg-block" src="Images//StrawberryStreet New Logocrop.png" alt=""></a>
-                    <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#navBarDropDown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="d-flex align-items-center">
-                    <a href="#"><img class="logoBanner d-none d-md-block d-lg-none" src="Images/Logo Transparent.png" alt=""></a>
-                    <div class="collapse navbar-collapse" id="navBarDropDown">
-                        <div class="dropdown">
-                            <div class="d-flex justify-content-center">
-                            <span class="tradeMarkSpan">‘Trendy outfits on a budget’</span>
-                            </div>
-                        <ul class="nav">
-                            <li class="nav-item"><a href="#" class="btn"><strong> HOME</strong></a></li>
-                            <li class="nav-item">
-                                <div>
-                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>SHOP</strong></button>
-                                        <div class="dropdownColor dropdown-menu">
-                                            <div class="d-flex justify-content-evenly flex-wrap">
-                                                <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>WOMEN</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Sexy tops</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Dresses</a>
-                                                </div>
-                                                <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>BOYS</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Hoodies</a>
-                                                </div>
-                                                <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>Beauty Essentials</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Luxxe Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Cosmetics</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Soaps</a>
-                                                </div>
-                                                <!-- <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>Bottoms</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Bottoms</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Jeans & Colored Jeans</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Leggings Pants</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Trousers</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Casual Pants</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Shorts</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Ultra Ligth Pants</a>
-                                                </div> -->
+    <!-- nav container -->
+    <div class="container-fluid banner d-flex justify-content-evenly">
+        <marquee behavior="alternate" direction="right">
+            <span>Check our <strong>Spring & Summer</strong></span>
+            <span><strong>50% off</strong> Grab Yours Now</span>
+        </marquee>
+    </div>      
+    <nav class="navBanner navbar navbar-expand-lg d-sm-flex justify-content-evenly">
+        <!-- logo Section -->
+        <section data-aos="flip-left" data-aos-duration="1000">
+            <a href="#"><img class="logoBanner d-none d-lg-block mx-3" src="Images/Strawberry Street-1.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarDropDown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </section>
+        <!-- Menu Section -->
+        <section data-aos="zoom-in" data-aos-duration="1000">
+            <div class="d-flex">
+                <a href="#"><img class="logoBanner d-sm-block d-md-block d-lg-none" src="Images/Strawberry Street-1.png" alt=""></a>
+                <div class="collapse navbar-collapse" id="navBarDropDown">
+                    <div class="dropdown">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#" class="btn"><strong> HOME</strong></a></li>
+                        <li class="nav-item">
+                            <div>
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>SHOP</strong></button>
+                                    <div class="dropdownColor dropdown-menu">
+                                        <div class="d-flex justify-content-evenly flex-wrap z-1">
+                                            <div class="m-2">
+                                                <span class="dropdown-item-text text-center"><strong>WOMEN</strong></span>
+                                                <hr>
+                                                <a href="#" class="btn dropdown-item mt-2">All Products</a>
+                                                <a href="#" class="btn dropdown-item mt-2">Sexy tops</a>
+                                                <a href="#" class="btn dropdown-item mt-2">Dresses</a>
+                                            </div>
+                                            <div class="m-2">
+                                                <span class="dropdown-item-text text-center"><strong>BOYS</strong></span>
+                                                <hr>
+                                                <a href="#" class="btn dropdown-item mt-2">All Products</a>
+                                                <a href="#" class="btn dropdown-item mt-2">Hoodies</a>
+                                            </div>
+                                            <div class="m-2">
+                                                <span class="dropdown-item-text text-center"><strong>Beauty Essentials</strong></span>
+                                                <hr>
+                                                <a href="#" class="btn dropdown-item mt-2">All Products</a>
+                                                <a href="#" class="btn dropdown-item mt-2">Luxxe Products</a>
+                                                <a href="#" class="btn dropdown-item mt-2">Cosmetics</a>
+                                                <a href="#" class="btn dropdown-item mt-2">Soaps</a>
                                             </div>
                                         </div>
-                                </div>
-                            </li>
-                            <!-- <li class="nav-item">
-                                    <div>
-                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>Mens</strong></button>
-                                            <div class="dropdownColor dropdown-menu">
-                                                <div class="d-flex justify-content-evenly">
-                                                    <div class="m-2">
-                                                        <span class="dropdown-item-text text-center"><strong>Tops</strong></span>
-                                                        <hr>
-                                                        <a href="#" class="btn dropdown-item mt-2">All Tops</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Tshirt</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">UT(Graphic T-Shirts)</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Polo Shirts</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Casual Shirts(Short Sleeves)</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Casual Shirts(Long Sleeves)</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Dress Shirts</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Sweater and Cardigans</a>
-                                                        <hr>
-                                                        <span class="dropdown-item-text text-center"><strong>Sports Wear</strong></span>
-                                                        <hr>
-                                                        <a href="#" class="btn dropdown-item mt-2">Utility Wear</a>
-                                                    </div>
-                                                    <div class="m-2">
-                                                        <span class="dropdown-item-text text-center"><strong>Bottoms</strong></span>
-                                                        <hr>
-                                                        <a href="#" class="btn dropdown-item mt-2">All Bottoms</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Jeans & Colored Jeans</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Chinos</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">UltraLight Pants</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Casual Pants</a>
-                                                        <a href="#" class="btn dropdown-item mt-2">Shorts</a>
-                                                    </div>
-                                                </div>
-                                            </div>
                                     </div>
-                            </li> -->
-                            <li class="nav-item"><a href="#" class="btn"><strong> NEW ARRIVALS</strong></a></li>
-                            <li class="nav-item"><a href="#" class="btn"><strong>FEATURED</strong></a></li>
-                            <li class="nav-item"><a href="#" class="btn"><strong>LIVE</strong></a></li>
-                            <li class="nav-item"><a href="#" class="btn"><strong>ABOUT</strong></a></li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="d-flex justify-content-evenly align-items-center my-4">
-                        <i class="logInIcon fs-2 fa-solid fa-user mx-2"></i>
-                        <i class="logInIcon fs-2 fa-solid fa-magnifying-glass mx-2"></i>
-                        <i class="logInIcon fs-2 fa-solid fa-cart-arrow-down mx-2"></i>
+                            </div>
+                        </li>  
+                        <li class="nav-item"><a href="#" class="btn"><strong> NEW ARRIVALS</strong></a></li>
+                        <li class="nav-item"><a href="#" class="btn"><strong>FEATURED</strong></a></li>
+                        <li class="nav-item"><a href="#" class="btn"><strong>LIVE</strong></a></li>
+                        <li class="nav-item"><a href="#" class="btn"><strong>ABOUT</strong></a></li>
+                    </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Search, Log In, Cart Section -->
+        <section class="d-flex justify-content-end" data-aos="flip-right" data-aos-duration="1000">
+            <div>
+                <div class="d-flex justify-content-evenly align-items-center">
+                    <form class="input-group border border-0 rounded-3"> 
+                        <input class="form-control" type="text" placeholder="Search">
+                        <button class="btn p-0" type="button" onclick="showSearchBox(searchBox)"><i class="logInIcon fs-5 fa-solid fa-magnifying-glass mx-2"></i><span class="d-none">Search</span></button>
+                    </form>
+                    <i class="logInIcon fs-5 fa-solid fa-cart-arrow-down mx-2"></i>
+                    <i class="logInIcon fs-5 fa-solid fa-user mx-2"></i>
+                </div>
+            </div>
+        </section>
     </nav>
-
-<!-- Second Navigation -->
-    <nav class="NavSecond container-fluid d-flex mb-5 justify-content-between align-items-center border px-4">
-        <div class="d-none d-lg-block">
-            <div class="d-flex align-items-center mx-3">
-                <div><span class="secondNavSpan border-1 rounded-2 p-1 m-1"><i class="fa-sharp fa-solid fa-scale-unbalanced-flip mx-4"></i><strong>SALE!</strong></span></div>
-                <div><a class="secondAnchorNav btn" href="#">Dresses</a></div>
-                <div><a class="secondAnchorNav btn" href="#">Clothing</a></div>
-                <div><a class="secondAnchorNav btn" href="#">Beach Wear</a></div>
-                <div><a class="secondAnchorNav btn" href="#">Jogger Pants</a></div>
-                <div><a class="secondAnchorNav btn" href="#">Dresses</a></div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <form class="m-1" action="">
-                <div class="input-group">
-                    <input class="rounded-3" type="text" placeholder="Search">
-                    <button class="searchbtn btn" type="button"><strong>Search</strong></button>
+<!-- EndNav -->
+<!-- LandingPage -->
+    <section class="adsContainer container-fluid d-flex">
+                <div class="d-flex flex-column align-items-center justify-content-center m-5">
+                    <h2 class="fontCutomColorPink mb-3" data-aos="zoom-out" data-aos-duration="2000">‘Trendy outfits on a budget’</h2>
+                    <h2 class="fontCutomColorWhite text-center" data-aos="zoom-in">Join US for <br> more DISCOUNT!</h2>
+                    <a class="myButtons btn" href="#" data-aos="fade-right">SIGN UP!</a>
+                    <a class="myButtonShopNow btn mt-1" href="#" data-aos="fade-left">SHOP NOW</a>
                 </div>
-            </form>
-        </div>
-    </nav>
-
-<!-- Main Content -->
-    <section class="mainSection d-none d-lg-block">
-        <div class="container d-flex">
-            <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
-                <div>
-                    <i class="fa-sharp fs-2 fa-solid fa-share-from-square mt-2"></i>
-                </div>
-                <div>
-                    <span><strong>SHARE & EARN</strong></span><br>
-                    <span>UP TO 15% OFF</span>
-                </div>
-            </div>
-            <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
-                <div>
-                    <i class="fa-solid fs-2 fa-sack-dollar mt-2"></i>
-                </div>
-                <div>
-                    <span><strong>GET P150 OFF</strong></span><br>
-                    <span>YOUR 1ST ORDER</span>
-                </div>
-            </div>
-            <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
-                <div>
-                <i class="fa-sharp fs-2 fa-solid fa-rotate-left mt-2"></i>
-                </div>
-                <div>
-                <span><strong>15-DAY FREE RETURNS</strong></span><br>
-                <span>ONCE PER ORDER</span>
-                </div>
-            </div>
-            <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
-                <div>
-                <i class="fa-sharp fs-2 fa-solid fa-share-from-square mt-2"></i>
-                </div>
-                <div>
-                <span><strong>EXCLUSIVE</strong></span><br>
-                <span>UPAYMENT OFFERS</span>
-                </div>
-            </div>
-            <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
-                <div>
-                <i class="fa-sharp fs-2 fa-solid fa-gift mt-2"></i>
-                </div>
-                <div>
-                <span><strong>GIFT CARDS</strong></span><br>
-                </div>
-            </div>
-        </div>
     </section>
-    <!-- Carousel -->
-    <div class="container d-flex justify-content-center align-items-center">
-        <div class="carousel slide" id="bannerCarousel" data-bs-ride="carousel">
-            <div class="p-1 border border-2 d-flex justify-content-center">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="2000"><img class="w-100 d-block" src="carousel/My project (5).jpg" alt=""></div>
-                            <div class="carousel-item" data-bs-interval="2000"><img class="d-block w-100" src="carousel/Carousel1.png" alt=""></div>
-                            <div class="carousel-item" data-bs-interval="2000"><img class="w-100 d-block" src="carousel/Carousel2.png" alt=""></div>
-                            <div class="carousel-item" data-bs-interval="2000"><img class="w-100 d-block" src="carousel/Carousel3.png" alt=""></div>
-                            <div class="carousel-item" data-bs-interval="2000"><img class="w-100 d-block" src="carousel/Carousel5.png" alt=""></div>
-                            <div class="carousel-item" data-bs-interval="2000"><img class="w-100 d-block" src="carousel/carousel4.png" alt=""></div>
-                        </div>
-                <!-- Button -->
-                    <button class="carouselbtn carousel-control-prev bg-black opacity-25" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Prev</span>
-                    </button>
-                    <button class="carouselbtn carousel-control-next bg-black opacity-25" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-            </div>
-        </div>
-    </div>
-    <section class="container-sm d-flex mb-2">
-        <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
+<!-- EndLandingPage -->
+<!-- Discount Tags -->
+    <section class="container d-flex mt-2">
+        <div class="d-flex container justify-content-evenly border rounded-2 align-items-center" data-aos="flip-up" data-aos-duration="1000">
             <div class="align-items-center">
                 <i class="fa-sharp fs-2 fa-solid fa-tag"></i>
             </div>
-            <div class="">
+            <div>
                 <h3 class="text-center"><strong>₱150 <span class="text-bg-dark">OFF</span></strong></h3>
                 <span>ON ORDERS OF ₱1,500+</span>
             </div>
         </div>
-        <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
+        <div class="d-flex container justify-content-evenly border rounded-2 align-items-center" data-aos="flip-up" data-aos-duration="1000">
             <div class="align-items-center">
                 <i class="fa-sharp fs-2 fa-solid fa-tag"></i>
             </div>
-            <div class="">
+            <div>
                 <h3 class="text-center"><strong>₱350 <span class="text-bg-dark">OFF</span></strong></h3>
                 <span>ON ORDERS OF ₱2,500+</span>
             </div>
         </div>
-        <div class="d-flex container justify-content-evenly border rounded-2 align-items-center">
+        <div class="d-flex container justify-content-evenly border rounded-2 align-items-center" data-aos="flip-up" data-aos-duration="1000">
             <div class="align-items-center">
                 <i class="fa-sharp fs-2 fa-solid fa-tag"></i>
             </div>
-            <div class="">
+            <div>
                 <h3 class="text-center"><strong>₱800 <span class="text-bg-dark">OFF</span></strong></h3>
                 <span>ON ORDERS OF ₱4,500+</span>
             </div>
         </div>
         
     </section>
-
-<!-- Categories -->
-    <section class="container-fluid">
-        <div class="d-flex justify-content-center mt-3">
-            <h3 class="border border-1 shadow p-3 rounded-5 text-center">Shop by Categories</h3>
-        </div>
-            <div class="d-flex justify-content-center mt-3 w-100 h-100">
-                <div>
-                    <!-- Categories Button -->
-                    <div class="d-lg-flex mt-1">
-                        <div class="col-6 mt-1 align-self-center">
-                            <div class=""> 
-                                <div class="d-flex">
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus"></i> Sexy Tops</a>
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i> Beauty Essentials</a>
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i> Dresses</a>
-                                </div>
-                                <div class="d-flex">
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>T-shirts</a>
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i>Jogger Pants</a>
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>Hoodies</a>
-                                </div>
-                                <div class="d-flex">
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus"></i>Soaps</a>
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i>Supplements</a>
-                                    <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>Cosmetics</a>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- Categories Image -->
-                        <div class= "col-6 mt-1 ">
-                            <div class="d-flex justify-content-center align-items-center h-100">
-                                <img class="categoriesImg" src="Images/MixStyle.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- EndDiscount Tags -->
+<!-- Categories Section -->
+    <section class="defaultContainer container-fluid d-md-flex justify-content-center mt-2">
+            <h2 data-aos="fade-up">Categories</h2>
+            
     </section>
-<!-- Dresses Sellers -->
-    <section class="container mt-4">
-        <hr>
-        <div class="d-md-flex justify-content-between mb-3">
-            <span>Dresses</span>
-            <span><a class="" href="#">See All > </a></span>
-        </div>
-        <!-- card -->
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱149</span>
-                            <span class="text-muted">12.7k sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-p45p4exo8alv8f" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Maria Crop top Long Sleeves Bangkok Top Inspired</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱149</span>
-                            <span class="text-muted">12.7k sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/c41c8703de919409427a12b4817956ba" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Victoria Body fit/Sexy Dress with Slit</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱99</span>
-                            <span class="text-muted">81 Sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-prnljz39nykv5d" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Tricia Bodycon Backless Sexy Dress</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱99</span>
-                            <span class="text-muted">2 sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-6uof8xhroykvd9" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Brianna Sexy Tube Dress</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱79</span>
-                            <span class="text-muted">12.7k sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-<!-- Photos -->
-    <section class="d-sm-flex justify-content-center">
-        <div class="h-50"><img class="bannerImg m-3" src="Images/Banner1.png" alt=""></div>
-        <div class="h-50"><img class="bannerImg m-3" src="Images/Banner2.png" alt=""></div>
-    </section>
-<!-- Featured Sellers -->
-<section class="container mt-4">
-        <hr>
-        <div class="d-md-flex justify-content-between mb-3">
-            <span>Featured</span>
-            <span><a class="" href="#">See All > </a></span>
-        </div>
-        <!-- card -->
-        <div class="cardZoomMainParent row row-cols-1 row-cols-md-3 g-4">
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/7c8da4d565b63c30bb45552ea84cbd98" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Elena Corset top with Puff Sleeves</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱99</span>
-                            <span class="text-muted">8.5k sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-da3z3m1602kv24" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Curdoroy Cargo Shorts 4 pockets</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱129</span>
-                            <span class="text-muted">23.9k sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-24c659aj02kv39" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Oversized Hoodie Jacket tiedye</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱399</span>
-                            <span class="text-muted">451 Sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/3f19903866ab303d069e5919987a655b" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Kally Dress with Puff Long Sleeves</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱99</span>
-                            <span class="text-muted">2 sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-            <!-- CardItems -->
-            <div class="cardZoom border border-1 shadow-sm">
-                <a class="text-decoration-none text-reset" href="#">
-                    <div class="position-relative">
-                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/aeb8f697a358c6c5d57a590a36e07e79" alt="">
-                        <div>
-                            <h5 class="cardTitleOverride mt-3">Anastasia Babydoll Dress</h5>
-                        </div>
-                        <div class="d-md-flex justify-content-between mt-5 mb-3">
-                            <span class="text-danger">₱179</span>
-                            <span class="text-muted">857k sold</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
 
-</section>
-<!-- Videos -->
-        <hr>
-        <div class="container d-md-flex justify-content-between mb-3">
-            <span>Live</span>
-            <span><a class="" href="#">See All > </a></span>
-        </div>
-<section class="container d-flex justify-content-center">
-    
-    <div class="container d-sm-flex justify-content-evenly mt-5">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fstrawberrystreet.ph%2Fvideos%2F554667519871242%2F&show_text=true&width=267&t=0" width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fstrawberrystreet.ph%2Fvideos%2F708576717445893%2F&show_text=true&width=267&t=0" width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fstrawberrystreet.ph%2Fvideos%2F1378926439517987%2F&show_text=true&width=267&t=0" width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-    </div>
-</section>
-<!-- Footer -->
-<footer class="mainFooter text-center text-lg-start text-muted mt-5">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-  
-      <!-- Right -->
-      <div>
-        <a href="#" class="me-4 link-secondary">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="me-4 link-secondary">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="me-4 link-secondary">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="#" class="me-4 link-secondary">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="me-4 link-secondary">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="#" class="me-4 link-secondary">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3 text-secondary"></i>COMPANY INFO
-            </h6>
-            <p>
-              <a href="#" class="text-reset">About Strawberry Street</a>
-            </p>
+
+    <footer class="mainFooter text-center text-lg-start text-muted mt-5">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
           </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              HELP & SUPPORT
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Shipping Info</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Returns</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">How to Order</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">How to Track</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Size Guide</a>
-            </p>
+          <!-- Left -->
+      
+          <!-- Right -->
+          <div>
+            <a href="#" class="me-4 link-secondary">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="me-4 link-secondary">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="me-4 link-secondary">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="me-4 link-secondary">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="me-4 link-secondary">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="me-4 link-secondary">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Cutomer Care
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Contact Us</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Payment Method</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Bonus Point</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">SHEIN VIP</a>
-            </p>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+      
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3 text-secondary"></i>COMPANY INFO
+                </h6>
+                <p>
+                  <a href="#" class="text-reset">About Strawberry Street</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  HELP & SUPPORT
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Shipping Info</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Returns</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">How to Order</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">How to Track</a>
+                </p>
+                <p>
+                    <a href="#!" class="text-reset">Size Guide</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Cutomer Care
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Contact Us</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Payment Method</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Bonus Point</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">SHEIN VIP</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+                <p>
+                  <i class="fas fa-envelope me-3 text-secondary"></i>
+                  info@example.com
+                </p>
+                <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
           </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3 text-secondary"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
+        </section>
+        <!-- Section: Links  -->
+      
+        <!-- Copyright -->
+        <div class="footerCopyRight text-center p-4">
+          © 2021 Copyright:
         </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-  
-    <!-- Copyright -->
-    <div class="footerCopyRight text-center p-4">
-      © 2021 Copyright:
-    </div>
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-
+        <!-- Copyright -->
+    </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script/bootstrap.js"></script>
 <script src="script/bootstrap.bundle.min.js"></script>
 <script src="script/script.js"></script>
+<script>AOS.init();</script>
 </html>
