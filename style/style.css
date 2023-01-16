@@ -27,6 +27,7 @@ body{
 .adsContainer {
   height: 90vh;
   min-width: 100%;
+  background-image: url("Images/alternateresize.jpg");
   background-image: url("/Images/alternateresize.jpg");
 }
 .myButtons {
@@ -137,7 +138,6 @@ body{
 }
 .categoriesAnchor:hover {
   background-color: #FF8E9E;
-  font-size: 1em;
 }
 .categoriesContainer img{
   height: 80vh;
@@ -174,7 +174,7 @@ body{
   height: 450px;
 }
 .defaultContainer {
-  min-height: 60vh;
+  min-height: 30vh;
 }
 .pinkBorder {
   border: 1px solid #F273E6;
