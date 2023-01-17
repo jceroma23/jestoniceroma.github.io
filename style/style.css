@@ -193,16 +193,18 @@ span{
 }
 .featureContainer {
   min-height: 80vh;
-  min-width: 100%;
-  white-space: nowrap;
+  max-width: 100%;
+  
 }
 .featuredImg {
   max-height: 251px;
-  min-width: 251px;
 }
 .featuredBackgroundImg {
   background-repeat: no-repeat;
   min-height: 80vh;
-  min-width: 351px;
-  white-space: nowrap;
+  max-width: 500px;
+}
+.featureContainerMain {
+  min-height: 80vh;
+  max-width: 500px;
 }
