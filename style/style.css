@@ -11,7 +11,7 @@
 
 body{
   background-color: #EEEEEE;
-  font-size: 10px;
+  font-size: 14px;
 }
 span{
   font-size: 1.5em;
@@ -158,7 +158,7 @@ span{
   /* border: 0.5px solid #050505; */
   min-width: 220px;
   max-height: 350px;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 .cardZoom:hover {
   transform: scale(1.022);
@@ -207,4 +207,54 @@ span{
 .featureContainerMain {
   min-height: 80vh;
   max-width: 500px;
+}
+.customCategoriesSideBar {
+  min-height: 80vh;
+  min-width: 250px;
+  background-color: pink;
+}
+.titleHeader{
+  font-weight: 700;
+}
+.list-group-color{
+  background-color: #F273E6;
+}
+.customCategoriesSideBar a{
+  font-weight: 700;
+}
+.mainItemContent {
+  min-height: 70vh;
+}
+.mainItemContent img{
+  max-height: 70vh;
+}
+.nav-item a{
+  font-weight: 700;
+  color: #050505;
+}
+.nav-item a:hover{
+  font-weight: 700;
+  color: #050505;
+  background-color: #F273E6;
+}
+.marqueSpan span{
+  font-size: 14px;
+}
+.aboutUsBanner {
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.aboutContent {
+  height: 70vh;
+  width: 80vw;
+}
+.aboutUsContainer{
+  width: 400px;
+}
+.aboutUsContainer span{
+  font-size: 16px;
+}
+.titleSpan {
+  color: red;
 }

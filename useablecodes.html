@@ -13,80 +13,76 @@
 </head>
 <body>
 <!-- Header -->
-    <nav>
-        <div>
-            <div class="container-fluid banner d-flex justify-content-evenly">
-                <marquee behavior="alternate" direction="right">
-                    <span>Check our <strong>Spring & Summer</strong></span>
-                    <span><strong>50% off</strong> Grab Yours Now</span>
-                </marquee>
-            </div>
-            <div class="banner container-fluid d-flex justify-content-center d-lg-none d-md-none">
-                <p class="text-center"><strong>STRAWBERRYSTREET</strong></p>
-            </div>
-        </div>
-        <div class="navBanner navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <div class="mx-5">
-                    <a href="#"><img class="logoBanner d-none d-lg-block" src="Images/Strawberry Street-1.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarDropDown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="d-flex">
-                    <a href="#"><img class="logoBanner d-none d-md-block d-lg-none" src="Images/Logo Transparent.png" alt=""></a>
-                    <div class="collapse navbar-collapse" id="navBarDropDown">
-                        <div class="dropdown">
-                        <ul class="nav">
-                            <li class="nav-item"><a href="#" class="btn"><strong> HOME</strong></a></li>
-                            <li class="nav-item">
-                                <div>
-                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>SHOP</strong></button>
-                                        <div class="dropdownColor dropdown-menu">
-                                            <div class="d-flex justify-content-evenly flex-wrap">
-                                                <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>WOMEN</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Sexy tops</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Dresses</a>
-                                                </div>
-                                                <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>BOYS</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Hoodies</a>
-                                                </div>
-                                                <div class="m-2">
-                                                    <span class="dropdown-item-text text-center"><strong>Beauty Essentials</strong></span>
-                                                    <hr>
-                                                    <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Luxxe Products</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Cosmetics</a>
-                                                    <a href="#" class="btn dropdown-item mt-2">Soaps</a>
-                                                </div>
-                                            </div>
+<nav class="navBanner navbar navbar-expand-lg d-sm-flex justify-content-evenly">
+    <!-- logo Section -->
+    <section data-aos="flip-left" data-aos-duration="1000">
+        <a href="#"><img class="logoBanner" src="Images/Strawberry Street-1.png" alt=""></a>
+        <span class="d-none navbar-brand" >Brand</span>
+        <button class="navbar-toggler mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#navBarDropDown" aria-expanded="false" aria-controls="navBarDropDown" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </section>
+    <!-- Menu Section -->
+    <section data-aos="zoom-in" data-aos-duration="1000">
+        <div class="d-flex">
+            <div class="collapse navbar-collapse" id="navBarDropDown">
+                <div class="dropdown">
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="btn"><strong> HOME</strong></a></li>
+                    <li class="nav-item">
+                        <div>
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>SHOP</strong></button>
+                                <div class="dropdownColor dropdown-menu">
+                                    <div class="d-flex justify-content-evenly flex-wrap z-1">
+                                        <div class="m-2">
+                                            <span class="dropdown-item-text text-center"><strong>WOMEN</strong></span>
+                                            <hr>
+                                            <a href="#" class="btn dropdown-item mt-2">All Products</a>
+                                            <a href="#" class="btn dropdown-item mt-2">Sexy tops</a>
+                                            <a href="#" class="btn dropdown-item mt-2">Dresses</a>
                                         </div>
+                                        <div class="m-2">
+                                            <span class="dropdown-item-text text-center"><strong>BOYS</strong></span>
+                                            <hr>
+                                            <a href="#" class="btn dropdown-item mt-2">All Products</a>
+                                            <a href="#" class="btn dropdown-item mt-2">Hoodies</a>
+                                        </div>
+                                        <div class="m-2">
+                                            <span class="dropdown-item-text text-center"><strong>Beauty Essentials</strong></span>
+                                            <hr>
+                                            <a href="#" class="btn dropdown-item mt-2">All Products</a>
+                                            <a href="#" class="btn dropdown-item mt-2">Luxxe Products</a>
+                                            <a href="#" class="btn dropdown-item mt-2">Cosmetics</a>
+                                            <a href="#" class="btn dropdown-item mt-2">Soaps</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </li>  
-                            <li class="nav-item"><a href="#" class="btn"><strong> NEW ARRIVALS</strong></a></li>
-                            <li class="nav-item"><a href="#" class="btn"><strong>FEATURED</strong></a></li>
-                            <li class="nav-item"><a href="#" class="btn"><strong>LIVE</strong></a></li>
-                            <li class="nav-item"><a href="#" class="btn"><strong>ABOUT</strong></a></li>
-                        </ul>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="d-flex justify-content-evenly align-items-center my-4">
-                        <i class="logInIcon fs-2 fa-solid fa-user mx-2"></i>
-                        <i class="logInIcon fs-2 fa-solid fa-cart-arrow-down mx-2"></i>
-                    </div>
+                    </li>  
+                    <li class="nav-item"><a href="#" class="btn"><strong> NEW ARRIVALS</strong></a></li>
+                    <li class="nav-item"><a href="#" class="btn"><strong>FEATURED</strong></a></li>
+                    <li class="nav-item"><a href="#" class="btn"><strong>LIVE</strong></a></li>
+                    <li class="nav-item"><a href="#" class="btn"><strong>ABOUT</strong></a></li>
+                </ul>
                 </div>
             </div>
         </div>
-    </nav>
-
+    </section>
+    <!-- Search, Log In, Cart Section -->
+    <section class="d-flex justify-content-end" data-aos="flip-right" data-aos-duration="1000">
+        <div>
+            <div class="d-flex justify-content-evenly align-items-center">
+                <form class="input-group border border-0 rounded-3"> 
+                    <input class="form-control" type="text" placeholder="Search">
+                    <button class="btn p-0" type="button" onclick="showSearchBox(searchBox)"><i class="logInIcon fs-5 fa-solid fa-magnifying-glass mx-2"></i><span class="d-none">Search</span></button>
+                </form>
+                <i class="logInIcon fs-5 fa-solid fa-cart-arrow-down mx-2"></i>
+                <i class="logInIcon fs-5 fa-solid fa-user mx-2"></i>
+            </div>
+        </div>
+    </section>
+</nav>
 <!-- Second Navigation -->
     <nav class="NavSecond container-fluid d-flex mb-5 justify-content-between align-items-center border px-4">
         <div class="d-none d-lg-block">
@@ -583,6 +579,297 @@
 </footer>
 <!-- Footer -->
 
+
+<section class="mainItemContent flex-fill">
+    <div class="tab-content" id="pills-tabContent">
+        <!-- For Women -->
+        <div class="tab-pane fade show active" id="nav-women" role="tabpanel" aria-labelledby="nav-women-tab" tabindex="0">
+            <div class="container mt-5 d-flex flex-wrap justify-content-center" >
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+        <!-- for Men -->
+        <div class="tab-pane fade" id="nav-men" role="tabpanel" aria-labelledby="nav-men-tab" tabindex="0">
+            <div class="container mt-5 d-flex flex-wrap justify-content-center" >
+                <!-- Items -->
+                <h1>MEN TO</h1>
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Items -->
+                <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                    <a class="text-decoration-none text-reset" href="#">
+                        <div class="position-relative">
+                            <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                            <div>
+                                <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                            </div>
+                            <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                <span class="text-danger">₱149</span>
+                                <span class="text-muted">12.7k sold</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-luxxe" role="tabpanel" aria-labelledby="nav-luxxe-tab" tabindex="0">3LUXXE</div>
+        <div class="tab-pane fade" id="nav-newarrivals" role="tabpanel" aria-labelledby="nav-newarrivals-tab" tabindex="0">NEW ARRIVAL</div>
+        <div class="tab-pane fade" id="nav-featured" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">FEATURED</div>
+    </div>
+</section>
 
 </body>
 <script src="script/bootstrap.js"></script>

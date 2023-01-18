@@ -12,90 +12,61 @@
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body >
 <!-- nav container -->
     <div class="container-fluid banner d-flex justify-content-evenly">
-        <marquee behavior="alternate" direction="right">
+        <marquee class="marqueSpan" behavior="alternate" direction="right">
             <span>Check our <strong>Spring & Summer</strong></span>
             <span><strong>50% off</strong> Grab Yours Now</span>
         </marquee>
     </div>      
-    <nav class="navBanner navbar navbar-expand-lg d-sm-flex justify-content-evenly">
-        <!-- logo Section -->
-        <section data-aos="flip-left" data-aos-duration="1000">
-            <a href="#"><img class="logoBanner d-none d-lg-block mx-3" src="Images/Strawberry Street-1.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarDropDown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </section>
-        <!-- Menu Section -->
-        <section data-aos="zoom-in" data-aos-duration="1000">
-            <div class="d-flex">
-                <a href="#"><img class="logoBanner d-sm-block d-md-block d-lg-none" src="Images/Strawberry Street-1.png" alt=""></a>
-                <div class="collapse navbar-collapse" id="navBarDropDown">
-                    <div class="dropdown">
-                    <ul class="nav">
-                        <li class="nav-item"><a href="#" class="btn"><strong> HOME</strong></a></li>
-                        <li class="nav-item">
-                            <div>
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>SHOP</strong></button>
-                                    <div class="dropdownColor dropdown-menu">
-                                        <div class="d-flex justify-content-evenly flex-wrap z-1">
-                                            <div class="m-2">
-                                                <span class="dropdown-item-text text-center"><strong>WOMEN</strong></span>
-                                                <hr>
-                                                <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                <a href="#" class="btn dropdown-item mt-2">Sexy tops</a>
-                                                <a href="#" class="btn dropdown-item mt-2">Dresses</a>
-                                            </div>
-                                            <div class="m-2">
-                                                <span class="dropdown-item-text text-center"><strong>BOYS</strong></span>
-                                                <hr>
-                                                <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                <a href="#" class="btn dropdown-item mt-2">Hoodies</a>
-                                            </div>
-                                            <div class="m-2">
-                                                <span class="dropdown-item-text text-center"><strong>Beauty Essentials</strong></span>
-                                                <hr>
-                                                <a href="#" class="btn dropdown-item mt-2">All Products</a>
-                                                <a href="#" class="btn dropdown-item mt-2">Luxxe Products</a>
-                                                <a href="#" class="btn dropdown-item mt-2">Cosmetics</a>
-                                                <a href="#" class="btn dropdown-item mt-2">Soaps</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </li>  
-                        <li class="nav-item"><a href="#" class="btn"><strong> NEW ARRIVALS</strong></a></li>
-                        <li class="nav-item"><a href="#" class="btn"><strong>FEATURED</strong></a></li>
-                        <li class="nav-item"><a href="#" class="btn"><strong>LIVE</strong></a></li>
-                        <li class="nav-item"><a href="#" class="btn"><strong>ABOUT</strong></a></li>
+    <nav class="navbar navBanner navbar-expand-lg" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="logoBanner" src="Images/Strawberry Street-1.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="btn nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="btn nav-link" href="shop.html">SHOP</a></li>
+                        <li class="nav-item"><a class="btn nav-link" href="about.html">ABOUT</a></li> </li>
                     </ul>
+                    <div class="d-flex justify-content-end w-25">
+                        <!-- Cart Items -->
+                        <div class="dropdown">
+                            <a href="#" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="logInIcon fs-5 fa-solid fa-cart-arrow-down mx-2"></i>
+                            </a>
+                            <div class="dropdown-menu dropdownCart">
+                                <p class="dropdown-item-text"> Your Cart Items</p>
+                                <div class="container d-flex flex-column justify-content-center">
+                                    <span class="text-center" style="font-size: 12px;">No Items Yet</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Login Button Modal -->
+                        <div>
+                        <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="logInIcon fs-5 fa-solid fa-user mx-2"></i>
+                        </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- Search, Log In, Cart Section -->
-        <section class="d-flex justify-content-end" data-aos="flip-right" data-aos-duration="1000">
-            <div>
-                <div class="d-flex justify-content-evenly align-items-center">
-                    <form class="input-group border border-0 rounded-3"> 
-                        <input class="form-control" type="text" placeholder="Search">
-                        <button class="btn p-0" type="button" onclick="showSearchBox(searchBox)"><i class="logInIcon fs-5 fa-solid fa-magnifying-glass mx-2"></i><span class="d-none">Search</span></button>
+                    <form class="d-flex" role="search">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="logInIcon fs-5 fa-solid fa-magnifying-glass mx-2"></i><span class="d-none">Search</span></button>
+                    </div>
                     </form>
-                    <i class="logInIcon fs-5 fa-solid fa-cart-arrow-down mx-2"></i>
-                    <i class="logInIcon fs-5 fa-solid fa-user mx-2"></i>
                 </div>
-            </div>
-        </section>
     </nav>
 <!-- End Nav -->
 
 <!-- LandingPage -->
-    <section class="adsContainer container-fluid d-flex" style="background-image: url(Images/alternateresize.jpg);">
+    <section class="adsContainer container d-flex overflow-x-hidden" style="background-image: url(Images/alternateresize.jpg);">  
                 <div class="d-flex flex-column align-items-center justify-content-center m-5">
-                    <h2 class="fontCutomColorPink mb-3" data-aos="zoom-out" data-aos-duration="2000">‘Trendy outfits on a budget’</h2>
-                    <h2 class="fontCutomColorWhite text-center" data-aos="zoom-in">Join US for <br> more DISCOUNT!</h2>
+                    <h2 class="fontCutomColorPink mb-3 mt-5">‘Trendy outfits on a budget’</h2>
+                    <h2 class="fontCutomColorWhite text-center">Join US for <br> more DISCOUNT!</h2>
                     <a class="myButtons btn" href="#" data-aos="fade-right">SIGN UP!</a>
                     <a class="myButtonShopNow btn mt-1" href="#" data-aos="fade-left">SHOP NOW</a>
                 </div>
@@ -163,16 +134,13 @@
         </div>
     <section class="defaultContainer container d-md-flex flex-column align-items-center mt-2" data-aos="fade-up" data-aos-duration="500">
         <div class="d-flex flex-wrap justify-content-center" >
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus"></i> Sexy Tops</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i> Beauty Essentials</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i> Dresses</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>T-shirts</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i>Jogger Pants</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>Hoodies</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus"></i>Soaps</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i>Supplements</a>
-            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>Cosmetics</a>
-        </div>
+            <a class="categoriesAnchor btn m-2 p-4" href="shop.html"><i class="fa-solid fs-4 fa-venus"></i> Sexy Tops</a>
+            <a class="categoriesAnchor btn m-2 p-4" href="shop.html"><i class="fa-solid fs-4 fa-shirt"></i> Beauty Essentials</a>
+            <a class="categoriesAnchor btn m-2 p-4" href="shop.html"><i class="fa-solid fs-4 fa-venus-mars"></i> Dresses</a>
+            <!-- <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-venus-mars"></i>T-shirts</a>
+            <a class="categoriesAnchor btn m-2 p-4" href="#"><i class="fa-solid fs-4 fa-shirt"></i>Jogger Pants</a> -->
+            <a class="categoriesAnchor btn m-2 p-4" href="shop.html"><i class="fa-solid fs-4 fa-venus-mars"></i>Hoodies</a>
+            </div>
     </section>
 <!-- End Categories Section -->
 
@@ -181,7 +149,7 @@
     <hr>
     <div class="d-md-flex justify-content-between mb-3">
         <span>New Arrivals</span>
-        <span><a class="" href="#">See All > </a></span>
+        <span><a class="" href="shop.html">See All > </a></span>
     </div>
     <!-- card -->
     <div class="d-flex overflow-y-hidden">
@@ -284,7 +252,7 @@
 <!-- End New Arrivals -->
 
 <!-- Featured -->
-<section class="featureContainer container d-md-flex justify-content-center align-items-center mt-5">
+<section class="featureContainer container d-md-flex justify-content-center align-items-center mt-5" data-aos="fade-up" data-aos-duration="1200">
 
     <div class="featureContainerMain container d-flex flex-column justify-content-center align-items-center">
         <h1>Featured</h1>
@@ -295,26 +263,29 @@
 
     <div class="featuredBackgroundImg container mt-5" style="background-image: url(https://cf.shopee.ph/file/06fb67c643d842eb8ce4a811410e078c);">
     </div>
-
 </section>
+        <div class="d-flex justify-content-center align-items-center mt-3"  data-aos="fade-up" data-aos-duration="1200">
+            <a class="myButtonShopNow btn " href="shop.html">View More</a>
+        </div>
 <!-- End Featured -->
 
 <!-- Our Story -->
-<section class="container d-flex justify-content-center align-items-center flex-column mt-3">
+<hr>
+<section class="container d-flex justify-content-center align-items-center flex-column mt-3 mb-5" data-aos="fade-up" data-aos-duration="1200">
     <div><h1 class="display-1">Our Story</h1></div>
     <div class="w-75 text-center"><span> Imagine yourself waking up to a new day, a song is playing in your heart, a wide 
         smile wraps your face, and feels like a hug in your clothes, I have been alive for 50 years
-         and over the years I have learned to love the profession.</span></div>
+        and over the years I have learned to love the profession.</span>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-3">
+        <a class="myButtonShopNow btn " href="#">Contact Us</a>
+    </div>
 </section>
+<hr>
 <!-- End Our Story -->
 
-
-
-
-
-
-
-    <footer class="mainFooter text-center text-lg-start text-muted mt-5">
+<!-- Footer -->
+    <footer class="mainFooter text-center text-lg-start text-muted mt-5" data-aos="fade-up" data-aos-duration="1200">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           <!-- Left -->
@@ -360,7 +331,7 @@
                   <i class="fas fa-gem me-3 text-secondary"></i>COMPANY INFO
                 </h6>
                 <p>
-                  <a href="#" class="text-reset">About Strawberry Street</a>
+                  <a href="about.html" class="text-reset">About Strawberry Street</a>
                 </p>
               </div>
               <!-- Grid column -->
@@ -411,18 +382,6 @@
               <!-- Grid column -->
       
               <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-                <p>
-                  <i class="fas fa-envelope me-3 text-secondary"></i>
-                  info@example.com
-                </p>
-                <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
-              </div>
-              <!-- Grid column -->
             </div>
             <!-- Grid row -->
           </div>
@@ -435,6 +394,34 @@
         </div>
         <!-- Copyright -->
     </footer>
+<!-- End Footer -->
+
+
+
+
+<!-- modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <label for="username">User Name</label>
+                <input class="form-control" type="text" placeholder="User Name">
+            <label for="username">Password</label>
+                <input class="form-control" type="password" placeholder="Password">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

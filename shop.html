@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- nav container -->
+            <div class="container-fluid banner d-flex justify-content-evenly">
+                <marquee class="marqueSpan" behavior="alternate" direction="right">
+                    <span>Check our <strong>Spring & Summer</strong></span>
+                    <span><strong>50% off</strong> Grab Yours Now</span>
+                </marquee>
+            </div>      
+            <nav class="navbar navBanner navbar-expand-lg" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img class="logoBanner" src="Images/Strawberry Street-1.png" alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0">
+                                <li class="nav-item"><a class="btn nav-link" href="index.html">HOME</a></li>
+                                <li class="nav-item"><a class="btn nav-link" href="shop.html">SHOP</a></li>
+                                <li class="nav-item"><a class="btn nav-link" href="about.html">ABOUT</a></li> </li>
+                            </ul>
+                            <div class="d-flex justify-content-end w-25">
+                                <!-- Cart Items -->
+                                <div class="dropdown">
+                                    <a href="#" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="logInIcon fs-5 fa-solid fa-cart-arrow-down mx-2"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdownCart">
+                                        <p class="dropdown-item-text"> Your Cart Items</p>
+                                        <div class="container d-flex flex-column justify-content-center">
+                                            <span class="text-center" style="font-size: 12px;">No Items Yet</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Login Button Modal -->
+                                <div>
+                                <a href="#" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="logInIcon fs-5 fa-solid fa-user mx-2"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <form class="d-flex" role="search">
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i class="logInIcon fs-5 fa-solid fa-magnifying-glass mx-2"></i><span class="d-none">Search</span></button>
+                            </div>
+                            </form>
+                        </div>
+            </nav>
+    <!-- End Nav -->
+
+
+<!-- Main Content -->
+    <section class="d-flex" data-aos="zoom-in" data-aos-duration="1000">
+        <!-- Categories PANEL -->
+            <section class="customCategoriesSideBar text-center d-none d-lg-block">
+                <h4 class="titleHeader mt-4">Category</h4>
+                <hr>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="nav flex-column nav-pills me-3" role="tablist" aria-orientation="vertical">
+                        <span><Strong>WOMEN</Strong></span>
+                        <hr>
+                        <a href="#" class="btn" id="v-pills-womenAllTops-tab" data-bs-toggle="pill" data-bs-target="#v-pills-womenAllTops" type="button" role="tab" aria-controls="v-pills-womenAllTops" aria-selected="true">All Products</a>
+                        <a href="#" class="btn" id="v-pills-womenDresses-tab" data-bs-toggle="pill" data-bs-target="#v-pills-womenDresses" type="button" role="tab" aria-controls="v-pills-womenDresses" aria-selected="false">Dresses</a>
+                        <a href="#" class="btn" id="v-pills-SexyTops-tab" data-bs-toggle="pill" data-bs-target="#v-pills-SexyTops" type="button" role="tab" aria-controls="v-pills-SexyTops" aria-selected="false">Sexy Tops</a>
+                        <a href="#" class="btn" id="v-pills-Luxxe-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Luxxe" type="button" role="tab" aria-controls="v-pills-Luxxe" aria-selected="false">Luxxe</a>
+                    </div>
+                </div>
+                    <!-- <a href="#" class="btn text-reset text-decoration-none m-1" aria-current="true">All Products</a>
+                    <a href="#" class="btn text-reset text-decoration-none m-1" aria-current="true">Sexy Tops</a>
+                    <a href="#" class="btn text-reset text-decoration-none m-1" aria-current="true">Dresses</a> -->
+            </section>
+        <!-- End Categories PANEL -->
+
+            <!--TabContent Item Collection -->
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- All tops -->
+                    <div class="tab-pane fade show active" id="v-pills-womenAllTops" role="tabpanel" aria-labelledby="v-pills-womenAllTops-tab" tabindex="0">
+                        <div class="container mt-5 d-flex flex-wrap justify-content-center" >
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/dc69fb672d0a8508845cd06df68fcbf7" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Korean Plaid and Floral Skirt with Slit</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱55</span>
+                                            <span class="text-muted">4.9k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/a85e91f92a5f00b2a22e76d4d264e3e7" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">20 Colors Unisex Baggy Sweatpants</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱129</span>
+                                            <span class="text-muted">24k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-p45p4exo8alv8f" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Maria Crop top Long Sleeves Bangkok Top Inspired</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱149 - ₱169</span>
+                                            <span class="text-muted">14.3k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱149</span>
+                                            <span class="text-muted">12.7k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/7c8da4d565b63c30bb45552ea84cbd98" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Elena Corset top with Puff Sleeves</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">8.5k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/aeb8f697a358c6c5d57a590a36e07e79" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Anastasia Babydoll Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱179</span>
+                                            <span class="text-muted">858 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-23010-y50to04632lv7a" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">UNISEX HOODIE JACKET PLAIN COLORS</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱189-₱199</span>
+                                            <span class="text-muted">0 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-prnljz39nykv5d" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Tricia Bodycon Backless Sexy Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">2 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/c41c8703de919409427a12b4817956ba" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Victoria Body fit/Sexy Dress with Slit</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">83 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dresses -->
+                    <div class="tab-pane fade" id="v-pills-womenDresses" role="tabpanel" aria-labelledby="v-pills-womenDresses-tab" tabindex="0">
+                        <div class="container mt-5 d-flex flex-wrap justify-content-center" >
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/2cd1818556ac6c596863eb74a792ef40" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Kally Dress with Puff Long Sleeves</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱129</span>
+                                            <span class="text-muted">741 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-pvqy7trroykv2c" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Brianna Sexy Tube Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱79</span>
+                                            <span class="text-muted">0 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/dd10702f6544157fbd86aa71c4e17132" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Gianna Floral Dress with Puff Sleeves</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱149</span>
+                                            <span class="text-muted">12.7k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/aeb8f697a358c6c5d57a590a36e07e79" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Anastasia Babydoll Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱179</span>
+                                            <span class="text-muted">858 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-prnljz39nykv5d" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Tricia Bodycon Backless Sexy Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">2 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/c41c8703de919409427a12b4817956ba" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Victoria Body fit/Sexy Dress with Slit</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">83 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sexy Tops -->
+                    <div class="tab-pane fade" id="v-pills-SexyTops" role="tabpanel" aria-labelledby="v-pills-SexyTops-tab" tabindex="0">
+                        <div class="container mt-5 d-flex flex-wrap justify-content-center" >
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/cba85eaa1906b18c0327157423da77ed" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Samantha Tank Top/Crop top</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱39</span>
+                                            <span class="text-muted">422k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/0fedc742e373c26ed436d9cfc583ed9e" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Ivana Corset top with Self-tie String</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱79</span>
+                                            <span class="text-muted">7.4k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-agtm9ct40xkv12" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Mia Sexy Knitted Halter Top</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱69</span>
+                                            <span class="text-muted">5 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/887dae7f2ee2bb9fe39be5df5a90d8cd" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Mona Top Self-Tie Strap</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱39</span>
+                                            <span class="text-muted">138 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/7c8da4d565b63c30bb45552ea84cbd98" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Elena Corset top with Puff Sleeves</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">8.5k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/aeb8f697a358c6c5d57a590a36e07e79" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Anastasia Babydoll Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱179</span>
+                                            <span class="text-muted">858 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/2ae35066054742169477ca59bc9126d7" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Camila Crisscross Floral Summer Top</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">539 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/sg-11134201-22120-prnljz39nykv5d" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Tricia Bodycon Backless Sexy Dress</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">2 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/c41c8703de919409427a12b4817956ba" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Victoria Body fit/Sexy Dress with Slit</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱99</span>
+                                            <span class="text-muted">83 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Luxxe -->
+                    <div class="tab-pane fade" id="v-pills-Luxxe" role="tabpanel" aria-labelledby="v-pills-Luxxe-tab" tabindex="0">
+                        <div class="container mt-5 d-flex flex-wrap justify-content-center" >
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/9106872d5a5ce0bb2b9ca8b4859c136e" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Luxxe White Enhanced Glutathione</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱2,500</span>
+                                            <span class="text-muted">3k sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/ab26dc2633bee6a918955eeb4458e738" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Magic Lip and Cheek Serum</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱59</span>
+                                            <span class="text-muted">32 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/96548b1b805b7104c1a55dfb03ae4208" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">ON HAND ORIGINAL FRONTROW CELEBRITY SOAP</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱220</span>
+                                            <span class="text-muted">96 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Items -->
+                            <div class="cardZoom border border-1 shadow-sm mx-1 w-25 mt-2">
+                                <a class="text-decoration-none text-reset" href="#">
+                                    <div class="position-relative">
+                                        <img class="imgCard z-1" src="https://cf.shopee.ph/file/ac534ba7f6d1ec4f779e1d006a87c7a5" alt="">
+                                        <div>
+                                            <h5 class="cardTitleOverride mt-3">Authentic Luxxe Protect Grapeseed Extract</h5>
+                                        </div>
+                                        <div class="d-md-flex justify-content-between mt-3 mb-3">
+                                            <span class="text-danger">₱1000</span>
+                                            <span class="text-muted">2 sold</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+            <!-- End Item Collection -->
+    </section>
+<!-- End Main Content -->
+
+
+<!-- Footer -->
+<footer class="mainFooter text-center text-lg-start text-muted mt-5" data-aos="fade-up" data-aos-duration="1200">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="#" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="me-4 link-secondary">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 text-secondary"></i>COMPANY INFO
+            </h6>
+            <p>
+              <a href="about.html" class="text-reset">About Strawberry Street</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              HELP & SUPPORT
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Shipping Info</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Returns</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">How to Order</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">How to Track</a>
+            </p>
+            <p>
+                <a href="#!" class="text-reset">Size Guide</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Cutomer Care
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Contact Us</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Payment Method</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Bonus Point</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">SHEIN VIP</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="footerCopyRight text-center p-4">
+      © 2021 Copyright:
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- End Footer -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script/bootstrap.js"></script>
+<script src="script/bootstrap.bundle.min.js"></script>
+<script src="script/script.js"></script>
+<script>AOS.init();</script>
+</html>
