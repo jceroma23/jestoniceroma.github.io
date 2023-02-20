@@ -42,17 +42,17 @@ const LogInComponent = ({ setToken, setName }) => {
             <h3 className="text-center">Log In</h3>
             
             <label className="mt-3" htmlFor="userName">
-              UserName :
+              User Name:
             </label>
               <input className="form-control mt-1" type="text" id="username" value={userName} onChange={(event) => setUsername(event.target.value)} placeholder="UserName" />
     
             <label className="mt-3" htmlFor="password">
-              Password :
+              Password:
             </label>
               <input id="password" className="form-control mt-1" type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} />
-            <div className="d-flex justify-content-evenly mt-5">
+            <div className="d-flex justify-content-evenly mt-3">
                 {error && <div>{error}</div>}
-              <button type="submit">Log In</button>
+              <button className="btn btn-secondary mt-3" type="submit">Log In</button>
               <Link to="/signup" className="btn btn-secondary mt-3">Sign Up</Link>
             </div>
           </form>
