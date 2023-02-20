@@ -16,7 +16,7 @@ const UserDropdown = ({ userName, handleLogout, isAdmin }) => {
       </Dropdown.Toggle>
     
       <Dropdown.Menu>
-      <Link to="/profile" className="dropdown-item" onClick={() => setIsOpen(false)}>
+      <Link to="/userdashboard" className="dropdown-item" onClick={() => setIsOpen(false)}>
           Profile
         </Link>
         <Link to="/purchases" className="dropdown-item" onClick={() => setIsOpen(false)}>
