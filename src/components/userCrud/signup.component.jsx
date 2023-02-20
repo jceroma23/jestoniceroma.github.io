@@ -13,6 +13,7 @@ const SignUpComponent = () => {
     customerDOB: '',
     customerType: ''
   });
+  
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -20,6 +21,7 @@ const SignUpComponent = () => {
       [name]: value
     });
   };
+
   const navigate = useNavigate();
   const [error, setError] = useState('');
   const handleSubmit = async (e) => {
@@ -46,39 +48,35 @@ const SignUpComponent = () => {
         <h3 className="text-center">Sign Up</h3>
         {error && <div className="error text-danger">{error}</div>}
         <label className="mt-3" htmlFor="userName">
-        User Name:</label> 
-        <input className="form-control mt-1" type="text" id="username" value={formData.userName} onChange={handleChange} />
+        User Name:
+        </label> 
+        <input className="form-control mt-1" type="text" id="userName" name="userName" value={formData.userName} onChange={handleChange} />
       
         <label className="mt-3" htmlFor="password">
-              Password :
+        Password :
         </label>
-        <input id="password" className="form-control mt-1" type="password" value={formData.password} onChange={handleChange} />
+        <input id="password" className="form-control mt-1" name="password" type="password" value={formData.password} onChange={handleChange} />
       
         <label className="mt-3" htmlFor="customername">
           Customer Name:
         </label>
-        <input id="customername" className="form-control mt-1"  type="text" value={formData.customerName} onChange={handleChange} />
-       
+        <input id="customername" className="form-control mt-1" name="customerName" type="text" value={formData.customerName} onChange={handleChange} />
         <label className="mt-3" htmlFor="customeraddress">
         Customer Address:
         </label>
-        <input id="customeraddress" className="form-control mt-1" type="text" value={formData.customerAddress} onChange={handleChange} />
-       
+        <input id="customeraddress" className="form-control mt-1" name="customerAddress" type="text" value={formData.customerAddress} onChange={handleChange} />
         <label className="mt-3" htmlFor="customercontact">
         Customer Contact:
         </label>
-        <input id="customercontact" className="form-control mt-1" type="text"  value={formData.customerContact} onChange={handleChange} />
-       
+        <input id="customercontact" className="form-control mt-1" name="customerContact" type="text" value={formData.customerContact} onChange={handleChange} />
         <label className="mt-3" htmlFor="customeremail">
         Customer Email:
         </label>
-        <input id="customeremail" className="form-control mt-1" type="email" value={formData.customerEmail} onChange={handleChange} />
-       
+        <input id="customeremail" className="form-control mt-1" name="customerEmail" type="email" value={formData.customerEmail} onChange={handleChange} />
         <label className="mt-3" htmlFor="customerdob">
         Customer DOB:
         </label>
-        <input id="customerdob" className="form-control mt-1" type="date" value={formData.customerDOB} onChange={handleChange} />
-       
+        <input id="customerdob" className="form-control mt-1" name="customerDOB" type="text" value={formData.customerDOB} onChange={handleChange} />
         <label className="mt-3" htmlFor="customertype">
         Customer Type:
         </label> 
