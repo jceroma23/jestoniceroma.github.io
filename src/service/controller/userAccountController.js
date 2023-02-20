@@ -77,7 +77,7 @@ const loginController = async (req, res) => {
       );
   
       // Send success response with JWT token
-      res.json({ token: token, user: { userId: user._id, userName: user.userName } });
+      res.json({ token: token, user: { userId: user._id, userName: user.userName, customerType: user.customerType} });
       console.log(token);
   
     } catch (error) {
