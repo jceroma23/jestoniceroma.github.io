@@ -5,7 +5,7 @@ const ProductDataService = {
     get: (id) => http.get("/products/${id}"),
     createProduct: (data) => http.post("/productsAdd", data),
     createAccount: (data) => http.post("/signup", data),
-    loginAccount:(data) => http.post("/login", data)
+    loginAccount: (data) => http.post("/login", data)
     };
 
 export default ProductDataService;
