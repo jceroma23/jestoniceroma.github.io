@@ -3,22 +3,22 @@ import { useNavigate } from 'react-router-dom';
 import ProductDataService from '../../service/service';
 import { Link } from 'react-router-dom';
 
-const LogInComponent = ({ setToken, setName }) => {
+const LogInComponent = () => {
     const [userName, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
           const response = await ProductDataService.loginAccount({ userName, password });
           console.log(response.data);
           localStorage.setItem('token', response.data.token);
-          localStorage.setItem('user', JSON.stringify(response.data.user));
-          navigate('/shop', { replace: true });
-
+          localStorage.setItem('user', JSON.stringify({
+            userId: response.data.user.userId,
+            userName: response.data.user.userName,
+            customerType: response.data.user.customerType
+          }));
           const user = JSON.parse(localStorage.getItem('user'));
           console.log(user.userName);
           // if (response.ok) {
@@ -29,12 +29,13 @@ const LogInComponent = ({ setToken, setName }) => {
           // } else {
           //   console.error(`Error: ${response.status} - ${response.statusText}`);
           // }
+          navigate('/shop', { replace: true });
+          
         } catch (error) {
           setError(error.response.data.message);
         }
+        
       };
-
-
       return (
         <div className="loginContainer container d-sm-flex justify-content-center align-items-center mt-5">
           <form className="form-control d-sm-flex flex-column justify-content-center p-4" onSubmit={handleSubmit}>
