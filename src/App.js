@@ -6,6 +6,8 @@ import LogInForm from "./components/userCrud/login.component";
 import SignUpComponent from "./components/userCrud/signup.component";
 import { useNavigate } from 'react-router-dom';
 import UserDropdown from "./layouts/userDropDown.layout";
+import userdashboard from "./pages/userdashboard";
+
 
 function App() {
 //this will set if the user is not log in or login
@@ -92,6 +94,7 @@ function App() {
         <Route path="/shop" element={<ProductsDisplay />} />
         <Route path="/login" element={<LogInForm />} />
         <Route path="/signup" element={<SignUpComponent />} />
+        <Route path="/userdashboard" element={<userdashboard />} />
       </Routes>
       
   </div>
