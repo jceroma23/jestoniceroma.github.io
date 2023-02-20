@@ -38,13 +38,13 @@ const SignUpComponent = () => {
 
   return (
     <div className="signUpContainer container d-sm-flex justify-content-center align-items-center mt-5">
-      {error && <div className="error text-danger">{error}</div>}
+     
 
       <form className="form-control d-sm-flex flex-column justify-content-center p-4" onSubmit={handleSubmit}>
-
+      
         <h3 className="text-center">Strawberry Street</h3>
         <h3 className="text-center">Sign Up</h3>
-      
+        {error && <div className="error text-danger">{error}</div>}
         <label className="mt-3" htmlFor="userName">
         User Name:</label> 
         <input className="form-control mt-1" type="text" id="username" value={formData.userName} onChange={handleChange} />
@@ -85,7 +85,7 @@ const SignUpComponent = () => {
         <input id="customertype"  className="form-control mt-1" type="text" value={formData.customerType} onChange={handleChange} />
       
         <div className="d-flex justify-content-evenly mt-3">
-            {error && <div>{error}</div>}
+           
         <button className="btn btn-secondary mt-3" type="submit">Submit</button>
         </div>
     </form>
