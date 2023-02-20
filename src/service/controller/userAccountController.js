@@ -50,7 +50,7 @@ const getAllUsers = async (req, res) => {
     }
   };
 
-  const loginController = async (req, res) => {
+const loginController = async (req, res) => {
     const { userName, password } = req.body;
     try {
       // Find user by username
@@ -77,13 +77,13 @@ const getAllUsers = async (req, res) => {
       );
   
       // Send success response with JWT token
-      res.json({ token: token });
+      res.json({ token: token, user: { userId: user._id, userName: user.userName } });
       console.log(token);
   
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: 'Server error' });
     }
-  };
+};
 
 module.exports = { signUpController, getAllUsers, loginController };

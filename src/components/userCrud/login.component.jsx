@@ -8,15 +8,27 @@ const LogInComponent = ({ setToken, setName }) => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
     const navigate = useNavigate();
+
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-          const response = await ProductDataService.loginAccount("/login", { userName, password });
+          const response = await ProductDataService.loginAccount({ userName, password });
+          console.log(response.data);
           localStorage.setItem('token', response.data.token);
+          localStorage.setItem('user', JSON.stringify(response.data.user));
           navigate('/shop', { replace: true });
-          setToken(token);
-        
-          console.log(response.data); // Add this line to log response data
+
+          const user = JSON.parse(localStorage.getItem('user'));
+          console.log(user.userName);
+          // if (response.ok) {
+          //   const data = await response.json();
+          //   console.log(data.data); // add this line to log the data to the console
+          //   localStorage.setItem('token', data.token);
+          //   navigate('/shop', { replace: true });
+          // } else {
+          //   console.error(`Error: ${response.status} - ${response.statusText}`);
+          // }
         } catch (error) {
           setError(error.response.data.message);
         }
