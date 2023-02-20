@@ -2,7 +2,9 @@ import React from "react";
 import ProductsDisplay from "./components/productsCrud/productsDisplay";
 import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import LogInForm from "./components/userCrud/login.component";
-import SignUpComponent from "./components/userCrud/signup.component";
+import SignUpComponent from "./components/userCrud/signupcomponent";
+import userdashboard from "./pages/userdashboard";
+
 function App() {
   return (
     //Navigation
@@ -38,6 +40,7 @@ function App() {
         <Route path="/shop" element={<ProductsDisplay />} />
         <Route path="/login" element={<LogInForm />} />
         <Route path="/signup" element={<SignUpComponent />} />
+        <Route path="/userdashboard" element={<userdashboard />} />
       </Routes>
   </div>
 </div>

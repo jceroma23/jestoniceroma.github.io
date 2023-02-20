@@ -6,3 +6,7 @@ img {
 .loginContainer {
     max-width: 350px;
 }
+
+.signUpContainer {
+    max-width: 500px;
+}

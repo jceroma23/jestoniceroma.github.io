@@ -34,48 +34,64 @@ const SignUpComponent = () => {
       setError(error.response.data.message); // <-- Set error message state to display on UI
     }
   };
+
+
   return (
-    <div>
-      <h1>Sign Up Page</h1>
+    <div className="signUpContainer container d-sm-flex justify-content-center align-items-center mt-5">
       {error && <div className="error text-danger">{error}</div>}
-      <form onSubmit={handleSubmit}>
-      <label>
-        User Name:
-        <input type="text" name="userName" value={formData.userName} onChange={handleChange} />
-      </label>
-      <label>
-        Password:
-        <input type="password" name="password" value={formData.password} onChange={handleChange} />
-      </label>
-      <label>
-        Customer Name:
-        <input type="text" name="customerName" value={formData.customerName} onChange={handleChange} />
-      </label>
-      <label>
+
+      <form className="form-control d-sm-flex flex-column justify-content-center p-4" onSubmit={handleSubmit}>
+
+        <h3 className="text-center">Strawberry Street</h3>
+        <h3 className="text-center">Sign Up</h3>
+      
+        <label className="mt-3" htmlFor="userName">
+        User Name:</label> 
+        <input className="form-control mt-1" type="text" id="username" value={formData.userName} onChange={handleChange} />
+      
+        <label className="mt-3" htmlFor="password">
+              Password :
+        </label>
+        <input id="password" className="form-control mt-1" type="password" value={formData.password} onChange={handleChange} />
+      
+        <label className="mt-3" htmlFor="customername">
+          Customer Name:
+        </label>
+        <input id="customername" className="form-control mt-1"  type="text" value={formData.customerName} onChange={handleChange} />
+       
+        <label className="mt-3" htmlFor="customeraddress">
         Customer Address:
-        <input type="text" name="customerAddress" value={formData.customerAddress} onChange={handleChange} />
-      </label>
-      <label>
+        </label>
+        <input id="customeraddress" className="form-control mt-1" type="text" value={formData.customerAddress} onChange={handleChange} />
+       
+        <label className="mt-3" htmlFor="customercontact">
         Customer Contact:
-        <input type="text" name="customerContact" value={formData.customerContact} onChange={handleChange} />
-      </label>
-      <label>
+        </label>
+        <input id="customercontact" className="form-control mt-1" type="text"  value={formData.customerContact} onChange={handleChange} />
+       
+        <label className="mt-3" htmlFor="customeremail">
         Customer Email:
-        <input type="email" name="customerEmail" value={formData.customerEmail} onChange={handleChange} />
-      </label>
-      <label>
+        </label>
+        <input id="customeremail" className="form-control mt-1" type="email" value={formData.customerEmail} onChange={handleChange} />
+       
+        <label className="mt-3" htmlFor="customerdob">
         Customer DOB:
-        <input type="text" name="customerDOB" value={formData.customerDOB} onChange={handleChange} />
-      </label>
-      <label>
+        </label>
+        <input id="customerdob" className="form-control mt-1" type="date" value={formData.customerDOB} onChange={handleChange} />
+       
+        <label className="mt-3" htmlFor="customertype">
         Customer Type:
-        <input type="text" name="customerType" value={formData.customerType} onChange={handleChange} />
-      </label>
-      <button type="submit">Submit</button>
+        </label> 
+        <input id="customertype"  className="form-control mt-1" type="text" value={formData.customerType} onChange={handleChange} />
+      
+        <div className="d-flex justify-content-evenly mt-3">
+            {error && <div>{error}</div>}
+        <button className="btn btn-secondary mt-3" type="submit">Submit</button>
+        </div>
     </form>
 
     </div>
   );
-};
+}
 
 export default SignUpComponent;
