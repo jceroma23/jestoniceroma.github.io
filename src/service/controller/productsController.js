@@ -12,13 +12,24 @@ const showAllProducts = (req, res) => {
 
 //addProducts
 const addProducts = async (req, res) => {
-    const products = new productsTbl(req.body);
     try {
-        await products.save();
-        res.status(201).send(products);
-    } catch (error) {
-        res.status(400).send({error});    
-    }
+        const { productName, price, description, imgUrl, rating } = req.body;
+        const newProduct = new productsTbl({ productName, price, description, imgUrl, rating });
+        const product = await newProduct.save();
+        res.status(201).json(product);
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
+      }
+    
+    //This is for POSTMAN
+    // const products = new productsTbl(req.body);
+    // try {
+    //     await products.save();
+    //     res.status(201).send(products);
+    // } catch (error) {
+    //     res.status(400).send({error});    
+    // }
 }
 
 //view by Id

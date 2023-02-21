@@ -23,7 +23,7 @@ const UserDropdown = ({ userName, handleLogout, isAdmin }) => {
           My Purchases
         </Link>
         {isAdmin ? (
-          <Link to="/seller" className="dropdown-item" onClick={() => setIsOpen(false)}>
+          <Link to="/sellerPage" className="dropdown-item" onClick={() => setIsOpen(false)}>
             Seller Page
           </Link>
         ) : null}
