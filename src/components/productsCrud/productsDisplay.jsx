@@ -1,21 +1,50 @@
 import React, { useState, useEffect } from "react";
 import ProductDataService from "../../service/service";
 import "../../assets/style/products.css";
+import { Card, Button } from 'react-bootstrap';
+import ProductModal from "../../layouts/productModal";
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 
 const ProductsDisplay = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await ProductDataService.getAll(
-        `/products?page=${currentPage}&limit=${itemsPerPage}`
-      );
+  const fetchProducts = async () => {
+    try {
+      let response;
+      if (searchTerm) {
+        response = await ProductDataService.search(searchTerm, currentPage, itemsPerPage);
+      } else {
+        response = await ProductDataService.getAll(currentPage, itemsPerPage);
+      }
       setProducts(response.data);
-    };
-    fetchData();
-  }, [currentPage, itemsPerPage]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const filteredProducts = products.filter((product) =>
+  product.productName.toLowerCase().includes(searchTerm.toLowerCase())
+);
+  useEffect(() => {
+    fetchProducts();
+  }, [currentPage, itemsPerPage, searchTerm]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setCurrentPage(1);
+    fetchProducts();
+  };
+
+  const handleReset = (e) => {
+    e.preventDefault();
+    setSearchTerm('');
+    setCurrentPage(1);
+  };
 
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
@@ -27,37 +56,108 @@ const ProductsDisplay = () => {
   return (
     <div>
       <h1 className="text-center">Product List</h1>
-      <div className="container d-md-flex justify-content-center mt-5">
-        <ul className="d-flex container">
-          {products.slice(0, itemsPerPage).map((product) => (
-            <li className="list-group-item m-2" key={product._id}>
-              <img src={product.imgUrl} alt="products" />
-              <h2>{product.productName}</h2>
-              <p>{product.description}</p>
-              <p>Price: ${product.price.$numberDecimal}</p>
-              <p>Rating: {product.rating}</p>
-            </li>
+      <form className="mb-3" onSubmit={handleSearch}>
+        <div className="form-group">
+          <label htmlFor="searchTerm">Search</label>
+          <input
+            type="text"
+            className="form-control"
+            id="searchTerm"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            placeholder="Search by product name"
+          />
+        </div>
+        <Button type="submit" className="mr-2">
+          Search
+        </Button>
+        <Button onClick={handleReset}>Reset</Button>
+      </form>
+      <div className="container d-flex flex-wrap justify-content-center mt-5">
+        {filteredProducts
+          .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+          .map((product) => (
+            <Card className="m-3" key={product._id} style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={product.imgUrl} />
+              <Card.Body>
+                <Card.Title>{product.productName}</Card.Title>
+                <Card.Text>{product.description}</Card.Text>
+                <Card.Text>Price: ${product.price.$numberDecimal}</Card.Text>
+                <Rating name="read-only" value={product.rating} readOnly />
+                <Button variant="primary" onClick={() => setSelectedProduct(product)}>
+                  View
+                </Button>
+              </Card.Body>
+            </Card>
           ))}
-        </ul>
       </div>
       <div className="d-flex justify-content-center">
         <nav>
           <ul className="pagination">
             {pageNumbers.map((number) => (
               <li key={number} className="page-item">
-                <a
+                <button
                   onClick={() => setCurrentPage(number)}
-                  href="#"
                   className="page-link"
+                  disabled={currentPage === number}
                 >
                   {number}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
         </nav>
       </div>
+      //modal
+    <ProductModal
+       product={selectedProduct}
+       onClose={() => setSelectedProduct(null)}
+       onAddToCart={(product) => console.log('Adding product to cart:', product)}
+    />
     </div>
+
+    //old
+    // <div>
+    //   <h1 className="text-center">Product List</h1>
+    //   <Form className="mb-3" onSubmit={handleSearch}>
+    //     <Form.Group controlId="searchTerm">
+    //       <Form.Label>Search</Form.Label>
+    //       <Form.Control type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search by product name" />
+    //     </Form.Group>
+    //     <Button type="submit" className="mr-2">Search</Button>
+    //     <Button onClick={handleReset}>Reset</Button>
+    //   </Form>
+    //   <div className="container d-md-flex justify-content-center mt-5">
+    //     <ul className="d-flex container">
+    //       {products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((product) => (
+    //         <li className="list-group-item m-2" key={product._id}>
+    //           <img src={product.imgUrl} alt="products" />
+    //           <h2>{product.productName}</h2>
+    //           <p>{product.description}</p>
+    //           <p>Price: ${product.price.$numberDecimal}</p>
+    //           <p>Rating: {product.rating}</p>
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   </div>
+    //   <div className="d-flex justify-content-center">
+    //     <nav>
+    //       <ul className="pagination">
+    //         {pageNumbers.map((number) => (
+    //           <li key={number} className="page-item">
+    //             <button
+    //               onClick={() => setCurrentPage(number)}
+    //               className="page-link"
+    //               disabled={currentPage === number}
+    //             >
+    //               {number}
+    //             </button>
+    //           </li>
+    //         ))}
+    //       </ul>
+    //     </nav>
+    //   </div>
+    // </div>
   );
 };
 

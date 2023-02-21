@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import ProductDataService from "../../service/service";
-
+import Sidebar from '../../layouts/sellerSideNav';
 const AddProductForm = () => {
   const [formData, setFormData] = useState({
     productName: '',
@@ -32,8 +31,9 @@ const AddProductForm = () => {
   };
 
   return (
-    <div className='container d-flex justify-content-center align-items-center'>
-        <form className='d-flex justify-content-center flex-column border border-1 rounded-1 p-5' onSubmit={handleSubmit}>
+    <div className='container d-flex justify-content-between align-items-center'>
+      <Sidebar></Sidebar>
+        <form className='d-flex flex-fill flex-column border border-1 rounded-1 p-5' onSubmit={handleSubmit}>
         <h1>Basic Information</h1>
         <label htmlFor="productName">Product Name :</label>
         <input className='form-control' type="text" id="productName" name="productName" value={formData.productName} onChange={handleChange} />

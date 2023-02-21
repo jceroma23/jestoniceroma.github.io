@@ -9,6 +9,7 @@ import UserDropdown from "./layouts/userDropDown.layout";
 import Userdashboard from "./pages/UserDashboard";
 import SellerPage from "./pages/sellerPage";
 import AddProductForm from "./components/productsCrud/addProducts";
+
 function App() {
 //this will set if the user is not log in or login
   const [loggedIn, setLoggedIn] = useState(() => {
@@ -88,6 +89,7 @@ function App() {
         <Route path="/login" element={<LogInForm />} />
         <Route path="/signup" element={<SignUpComponent />} />
         <Route path="/userdashboard" element={<Userdashboard />} />
+        {/* sidebar wont disappear */}
         <Route path="/sellerPage" element={<SellerPage />} />
         <Route path="/productsAdd" element={<AddProductForm />} />
       </Routes>
