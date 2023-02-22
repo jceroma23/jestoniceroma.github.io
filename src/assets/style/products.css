@@ -1,7 +1,7 @@
-img {
+/* img {
     max-width: 300px;
     min-width: 150px;
-}
+} */
 
 .loginContainer {
     max-width: 350px;
@@ -9,4 +9,22 @@ img {
 
 .signUpContainer {
     max-width: 500px;
+}
+
+.userDashboard {
+    max-width: 1000px;
+}
+
+.aboutSocMed img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav .logoStrawberryStreet{
+    width: auto;
+    height: 100px;
+}
+.nav .textStrawberryStreet {
+    width: auto;
+    height: 80px; 
 }

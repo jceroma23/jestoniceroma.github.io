@@ -1,19 +1,19 @@
 import React from 'react'
 
-const home = () => {
+const Home = () => {
 
 
   return (
     
 
     <div class="container">
-        <img src="" alt="" style="width:100%"/>
+        <img src="https://img.ws.mms.shopee.ph/ed380ccb49f530c21d51b57447ddc122" alt="" style="width:100%"/>
         <h2>SIZZLING COLLECTION</h2>
         <p>Save up to 60% this weekend only!</p>
-        <button class="btn">Shop Now!</button>
+        <button className="btn m-3 px-5" style={{backgroundColor: "#d43589"}}>Shop Now!</button>
     </div>
 
   )
 }
 
-export default home
+export default Home
