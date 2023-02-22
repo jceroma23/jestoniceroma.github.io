@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const UserTbl = require('./userSchema');
 const productsTbl = require('./productsSchema');
+
 const orderCheckoutSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
@@ -9,7 +10,7 @@ const orderCheckoutSchema = new Schema({
     required: true
   },
   products: [{
-    product: {
+    id: {
       type: Schema.Types.ObjectId,
       ref: 'productsTbl',
       required: true

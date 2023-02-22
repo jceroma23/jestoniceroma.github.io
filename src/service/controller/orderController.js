@@ -2,6 +2,7 @@
 const orderCheckoutTbl = require('../model/orderSchema');
 const productsTbl = require('../model/productsSchema');
 const UserTbl = require('../model/userSchema');
+const mongoose = require('mongoose');
 
 
 //display checkout details
@@ -21,30 +22,34 @@ const displayCheckout = async (req, res) => {
   };
 
   //add checkout details
+  //passing id thru local storage is not secure. but time is gold haha
   const createCheckout = async (req, res) => {
     try {
-      const { userId, products, total } = req.body;
+      const { user, products, total } = req.body;
+ console.log(products);
+    // Validate user exists
+    const userExists = await UserTbl.findById(user);
+    if (!userExists) {
+      return res.status(404).json({ error: 'User not found' });
+    }
   
-      // Find the user by id
-      const user = await UserTbl.findById(userId);
-  
-      // Create a new checkout record
-      const checkout = await orderCheckoutTbl.create({
-        user: user._id,
-        products: products.map((product) => ({
-          product: product.productId,
-          quantity: product.quantity,
-          subtotal: product.subtotal
-        })),
+      // Create the new checkout document
+      const newCheckout = new orderCheckoutTbl({
+        user,
+        products,
         total,
-        status: 'created'
       });
   
-      res.status(201).json({ message: 'Checkout created successfully', checkout });
+      // Save the checkout document to the database
+      await newCheckout.save();
+  
+      res.status(200).json({ message: 'Checkout created successfully' });
+  
     } catch (err) {
       console.error(err);
       res.status(500).json({ message: 'Server error' });
     }
   };
+  
 
   module.exports = { displayCheckout, createCheckout };
