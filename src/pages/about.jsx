@@ -1,8 +1,6 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
-
-
     return (
         <div className="about container d-sm-flex justify-content-center align-items-center mt-5">
             <h3 className="me-5">About Us</h3>
@@ -41,7 +39,6 @@ const About = () => {
               </div>
         </div>
   )
+};
 
-}
-
-export default About
+export default About;
