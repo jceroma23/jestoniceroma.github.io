@@ -15,7 +15,7 @@ const LogInComponent = () => {
           console.log(response.data);
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('user', JSON.stringify({
-            userId: response.data.user.userId,
+            id: response.data.user.userId,
             userName: response.data.user.userName,
             customerType: response.data.user.customerType
           }));

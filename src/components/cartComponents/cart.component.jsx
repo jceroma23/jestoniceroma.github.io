@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -6,24 +8,28 @@ import ProductDataService from '../../service/service';
 const CartModal = ({ onClose, show }) => {
   //cart
   const [cartItems, setcartItems] = useState([]);
+  // const [userId, setUserId] = useState(localStorage.getItem('user')?.id);
+  //   useEffect(() => {
+  //     const user = JSON.parse(localStorage.getItem('user'));
+  //     setUserId(user?.id);
+  //   });
+  //   window.addEventListener('storage', handleStorageChange);
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem('cartItems')) || [];
     setcartItems(items);
-    console.log(items, 'useeffect');
   }, []);
+
   const updateCart = (items) => {
     setcartItems(items);
     localStorage.setItem('cartItems', JSON.stringify(items));
-    console.log(items, 'updateCart');
   };
   const removeItem = (item) => {
-    const newItems = cartItems.filter((cartItems) => cartItems.productId !== item.productId);
+    const newItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
     updateCart(newItems);
-    console.log(newItems, 'removeCart');
   };
   const [productMap, setProductMap] = useState({});
   useEffect(() => {
-    const ids = cartItems.map((item) => item.productId);
+    const ids = cartItems.map((item) => item.id);
     const promises = ids.map((id) => ProductDataService.get(id));
     Promise.all(promises)
       .then((responses) => {
@@ -40,37 +46,42 @@ const CartModal = ({ onClose, show }) => {
   }, [cartItems]);
   const getProduct = (id) => {
     const product = productMap[id];
-  console.log(`getProductid:(${id}):`, product);
-  return product ? product : {};
+    return product ? product : {};
   };
   const total = cartItems.reduce(
     (acc, item) => {
-      const product = getProduct(item.productId);
+      const product = getProduct(item.id);
       return acc + (product.price ? product.price.$numberDecimal : 0) * item.quantity;
     },
     0
   );
 
-
-
-
   //checkout
   const onCheckout = async () => {
     try {
-      const userId = '...'; // Replace with the ID of the currently logged-in user
+      const user = JSON.parse(localStorage.getItem('user'));
+      const userId = user?.id;
+      const products = cartItems.map((item) => ({
+        id: item.id,
+        quantity: item.quantity,
+        subtotal: getProduct(item.id).price.$numberDecimal * item.quantity
+      }));
+      const total = products.reduce((sum, item) => sum + item.subtotal, 0);
       const requestBody = {
-        userId,
-        products: cartItems,
-        total,
+        user: userId,
+        products,
+        total
       };
-      const response = await ProductDataService.createCheckOut(requestBody);
-      console.log(response.data);
-      console.log("Successfully Checkout");
-      onClose();
-    } catch (error) {
-      console.error(error);
-    }
-  };
+      console.log(requestBody, 'request Body');
+    const response = await ProductDataService.createCheckOut(requestBody);
+    console.log(response, 'CheckOutData');
+    console.log("Successfully Checkout");
+    onClose();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 
   return (
     <Modal show={show} onHide={onClose}>
@@ -93,20 +104,20 @@ const CartModal = ({ onClose, show }) => {
             </thead>
             <tbody>
               {cartItems.map((item) => (
-                <tr key={item.productId}>
+                <tr key={item.id}>
                   <td>
                     <div className="d-flex">
                       <img
-                        src={getProduct(item.productId)?.imgUrl}
-                        alt={getProduct(item.productId)?.productName}
+                        src={getProduct(item.id)?.imgUrl}
+                        alt={getProduct(item.id)?.productName}
                         className="cart-item-img"
                         style={{ maxWidth: '50px' }}
                       />
-                      <span className="ml-2">{getProduct(item.productId)?.productName}</span>
+                      <span className="ml-2">{getProduct(item.id)?.productName}</span>
                     </div>
                   </td>
                   <td>{item.quantity}</td>
-                  <td>${getProduct(item.productId)?.price?.$numberDecimal ?? ''}</td>
+                  <td>${getProduct(item.id)?.price?.$numberDecimal ?? ''}</td>
                   <td>
                     <button className="btn btn-sm btn-danger" onClick={() => removeItem(item)}>Remove</button>
                   </td>

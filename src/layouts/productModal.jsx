@@ -11,17 +11,17 @@ const ProductModal = ({ product, onClose, productId}) => {
     setQuantity(Math.max(1, quantity + value));
   };
   // if existing
-    const handleAddToCart = (productId, quantity) => {
-      const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
-      const existingCartItem = cartItems.find(item => item.productId === productId);
-      if (existingCartItem) {
-        existingCartItem.quantity += quantity;
-      }else {
-        cartItems.push({ productId, quantity });
-      }
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-      window.location.reload(false);
-      onClose();
+  const handleAddToCart = (productId, quantity) => {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const existingCartItem = cartItems.find(item => item.id === productId);
+    if (existingCartItem) {
+      existingCartItem.quantity += quantity;
+    } else {
+      cartItems.push({ id: productId, quantity });
+    }
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    window.location.reload(false);
+    onClose();
   }
   return (
     <Modal show={product !== null} onHide={onClose}>
