@@ -5,6 +5,7 @@ const dotEnv = require('dotenv');
 const cors = require('cors');
 const productRouter = require('./service/routes/productRouter');
 const userRouter = require('./service/routes/userRouter');
+const orderRouter = require('./service/routes/orderRouter')
 //express app
 dotEnv.config();
 const app = express();
@@ -27,7 +28,7 @@ app.use((req, res, next)=>{
 })
 app.use('/', productRouter);
 app.use('/', userRouter);
-
+app.use('/', orderRouter);
 //connection
 mongoose.connect(process.env.DB_CONNECT, {
     useNewUrlParser: true,

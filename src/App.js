@@ -12,24 +12,26 @@ import AddProductForm from "./components/productsCrud/addProducts";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
+import { Navbar, Nav, Button } from 'react-bootstrap';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Cart from "./components/cartComponents/cart.component";
 function App() {
+  //CART FuNCTION
+  const [showCartModal, setShowCartModal] = useState(false);
+
+  const handleCartClick = () => {
+    setShowCartModal(true);
+  };
+
+  const handleCloseCartModal = () => {
+    setShowCartModal(false);
+  };
 //this will set if the user is not log in or login
   const [loggedIn, setLoggedIn] = useState(() => {
     return !!localStorage.getItem('token');
   });
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
-// Add an event listener to listen for changes to the localStorage object
-  // useEffect(() => {
-  //   const handleStorageChange = () => {
-  //   setLoggedIn(!!localStorage.getItem('token'));
-  // };
-  // window.addEventListener('storage', handleStorageChange);
-  // return () => {
-  //   window.removeEventListener('storage', handleStorageChange);
-  // };
-  // }, []);
-
   useEffect(() => {
     const user = localStorage.getItem('user');
     console.log(user); // check if user is null or the correct value
@@ -44,13 +46,11 @@ function App() {
   const handleLogout = () => {
     setLoggedIn(false);
     localStorage.removeItem('token');
-    localStorage.removeItem('user'); 
+    localStorage.removeItem('user');
+    localStorage.removeItem('cartItems');  
     navigate('/', { replace: true });
   };
 
-  // const handleLogin = () => {
-  //   setLoggedIn(true);
-  // };
   
   return (
     //Navigation
@@ -72,9 +72,9 @@ function App() {
           <Link to="/about" className="nav-link text-dark">ABOUT</Link>
         </li>
         <li>
-          <Link to="/cart" className="nav-link text-dark">CART</Link>
-        </li>
-        <li>
+        <Button onClick={handleCartClick}>
+        <ShoppingCartIcon />
+        </Button>
         </li>
       </ul>
       {loggedIn ? (
@@ -83,7 +83,8 @@ function App() {
           <Link className="nav-link text-white" to="/login">Login</Link>
         )}
     </div>
-
+    
+      
   </div>
   
   <div className="container mt-3">
@@ -92,6 +93,7 @@ function App() {
         <Route path="/login" element={<LogInForm />} />
         <Route path="/signup" element={<SignUpComponent />} />
         <Route path="/userdashboard" element={<Userdashboard />} />
+        {/* <Route path="/shop" element={<ProductsDisplay handleAddToCart={handleAddToCart} />} /> */}
         <Route path="/sellerPage" element={<SellerPage />} />
         <Route path="/productsAdd" element={<AddProductForm />} />
         <Route path="/home" element={<Home />} />
@@ -99,6 +101,11 @@ function App() {
       </Routes>
       
   </div>
+{/* MODAL */}
+  <Cart
+        onClose={handleCloseCartModal}
+        show={showCartModal}
+      />
 </div>
   );
 }

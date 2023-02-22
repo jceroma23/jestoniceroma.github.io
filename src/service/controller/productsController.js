@@ -1,13 +1,31 @@
 const productsTbl = require('../model/productsSchema');
 
 //show All Products
-const showAllProducts = (req, res) => {
-    productsTbl.find().sort({createdAt:-1})
+const showAllProducts = async (req, res) => {
+        productsTbl.find().sort({createdAt:-1})
     .then((productItem) => {
          res.status(200).send(productItem);
         console.log("working");
     })
     .catch(err => console.log(err));
+}
+//search by Name
+const findSearchProducts = async (req, res) => {
+    try {
+        const searchTerm = req.query.searchTerm;
+        let searchFilter = {};
+    
+        if (searchTerm) {
+          const regex = new RegExp(searchTerm, 'i');
+          searchFilter = { productName: regex };
+        }
+    
+        const products = await productsTbl.find(searchFilter).sort({ createdAt: -1 });
+        res.status(200).json(products);
+      } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Server error' });
+      }
 }
 
 //addProducts
@@ -76,5 +94,6 @@ module.exports = {
     addProducts,
     findProduct,
     productsDelete,
-    productEdit
+    productEdit,
+    findSearchProducts
     };
