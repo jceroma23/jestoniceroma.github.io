@@ -9,6 +9,9 @@ import UserDropdown from "./layouts/userDropDown.layout";
 import Userdashboard from "./pages/UserDashboard";
 import SellerPage from "./pages/sellerPage";
 import AddProductForm from "./components/productsCrud/addProducts";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
 function App() {
 //this will set if the user is not log in or login
   const [loggedIn, setLoggedIn] = useState(() => {
@@ -52,23 +55,24 @@ function App() {
   return (
     //Navigation
     <div className="">
-      <div className="container px-3 py-2 text-bg-dark">
+      <div className="container px-3 py-2 " style={{backgroundColor: "#f7cdcf", color: "black"}}>
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+        <img src="" alt="sslogo" />
+      <a href="/" className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-dark text-decoration-none" >
         Strawberry Street
       </a>
       <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
         <li>
-          <Link to="/" className="nav-link text-secondary">HOME</Link>
+          <Link to="/home" className="nav-link text-light">HOME</Link>
         </li>
         <li>
-          <Link to="/shop" className="nav-link text-white">SHOP</Link>
+          <Link to="/shop" className="nav-link text-dark">SHOP</Link>
         </li>
         <li>
-          <Link to="/about" className="nav-link text-white">ABOUT</Link>
+          <Link to="/about" className="nav-link text-dark">ABOUT</Link>
         </li>
         <li>
-          <Link to="/cart" className="nav-link text-white">CART</Link>
+          <Link to="/cart" className="nav-link text-dark">CART</Link>
         </li>
         <li>
         </li>
@@ -90,6 +94,8 @@ function App() {
         <Route path="/userdashboard" element={<Userdashboard />} />
         <Route path="/sellerPage" element={<SellerPage />} />
         <Route path="/productsAdd" element={<AddProductForm />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       
   </div>

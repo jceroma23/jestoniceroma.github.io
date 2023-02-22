@@ -11,7 +11,7 @@ const UserDropdown = ({ userName, handleLogout, isAdmin }) => {
         };
   return (
     <Dropdown>
-      <Dropdown.Toggle variant="dark" id="dropdown-basic">
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
         {userName.userName}
       </Dropdown.Toggle>
     
