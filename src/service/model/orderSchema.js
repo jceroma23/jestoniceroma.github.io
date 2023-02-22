@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 const UserTbl = require('./userSchema');
 const productsTbl = require('./productsSchema');
 
-const orderCheckoutSchema = new Schema({
+const orderCheckoutSchema = new mongoose.Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'UserTbl',
+    ref: 'userAccount',
     required: true
   },
   products: [{

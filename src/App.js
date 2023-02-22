@@ -12,6 +12,7 @@ import AddProductForm from "./components/productsCrud/addProducts";
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Cart from "./components/cartComponents/cart.component";
+import CheckOutPage from "./layouts/checkOutPage";
 function App() {
   //CART FuNCTION
   const [showCartModal, setShowCartModal] = useState(false);
@@ -89,7 +90,7 @@ function App() {
         <Route path="/login" element={<LogInForm />} />
         <Route path="/signup" element={<SignUpComponent />} />
         <Route path="/userdashboard" element={<Userdashboard />} />
-        {/* <Route path="/shop" element={<ProductsDisplay handleAddToCart={handleAddToCart} />} /> */}
+        <Route path="/checkOut" element={<CheckOutPage />} />
         <Route path="/sellerPage" element={<SellerPage />} />
         <Route path="/productsAdd" element={<AddProductForm />} />
       </Routes>

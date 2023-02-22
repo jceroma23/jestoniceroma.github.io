@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import ProductDataService from '../../service/service';
-
+import { useNavigate } from 'react-router-dom';
 const CartModal = ({ onClose, show }) => {
   //cart
   const [cartItems, setcartItems] = useState([]);
@@ -55,7 +55,7 @@ const CartModal = ({ onClose, show }) => {
     },
     0
   );
-
+  const navigate = useNavigate();
   //checkout
   const onCheckout = async () => {
     try {
@@ -76,6 +76,7 @@ const CartModal = ({ onClose, show }) => {
     const response = await ProductDataService.createCheckOut(requestBody);
     console.log(response, 'CheckOutData');
     console.log("Successfully Checkout");
+    navigate('/checkOut', { replace: true });//cahnge this
     onClose();
   } catch (error) {
     console.error(error);
