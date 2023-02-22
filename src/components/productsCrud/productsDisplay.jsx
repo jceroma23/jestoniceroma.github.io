@@ -7,13 +7,14 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
+
 const ProductsDisplay = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
-
+ 
   const fetchProducts = async () => {
     try {
       let response;
@@ -28,8 +29,10 @@ const ProductsDisplay = () => {
     }
   };
   const filteredProducts = products.filter((product) =>
+  // console.log(product, 'product only')
   product.productName.toLowerCase().includes(searchTerm.toLowerCase())
 );
+
   useEffect(() => {
     fetchProducts();
   }, [currentPage, itemsPerPage, searchTerm]);
@@ -108,56 +111,13 @@ const ProductsDisplay = () => {
           </ul>
         </nav>
       </div>
-      //modal
-    <ProductModal
-       product={selectedProduct}
-       onClose={() => setSelectedProduct(null)}
-       onAddToCart={(product) => console.log('Adding product to cart:', product)}
-    />
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+       
+      />
     </div>
 
-    //old
-    // <div>
-    //   <h1 className="text-center">Product List</h1>
-    //   <Form className="mb-3" onSubmit={handleSearch}>
-    //     <Form.Group controlId="searchTerm">
-    //       <Form.Label>Search</Form.Label>
-    //       <Form.Control type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search by product name" />
-    //     </Form.Group>
-    //     <Button type="submit" className="mr-2">Search</Button>
-    //     <Button onClick={handleReset}>Reset</Button>
-    //   </Form>
-    //   <div className="container d-md-flex justify-content-center mt-5">
-    //     <ul className="d-flex container">
-    //       {products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((product) => (
-    //         <li className="list-group-item m-2" key={product._id}>
-    //           <img src={product.imgUrl} alt="products" />
-    //           <h2>{product.productName}</h2>
-    //           <p>{product.description}</p>
-    //           <p>Price: ${product.price.$numberDecimal}</p>
-    //           <p>Rating: {product.rating}</p>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </div>
-    //   <div className="d-flex justify-content-center">
-    //     <nav>
-    //       <ul className="pagination">
-    //         {pageNumbers.map((number) => (
-    //           <li key={number} className="page-item">
-    //             <button
-    //               onClick={() => setCurrentPage(number)}
-    //               className="page-link"
-    //               disabled={currentPage === number}
-    //             >
-    //               {number}
-    //             </button>
-    //           </li>
-    //         ))}
-    //       </ul>
-    //     </nav>
-    //   </div>
-    // </div>
   );
 };
 

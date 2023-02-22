@@ -22,14 +22,14 @@ const productSchema = new Schema({
     rating:{
         type: Number,
         require: true
+    },
+    stock:{
+        type: Number,
+        require: true
     }
 })
 
-productSchema.method("toJSON", function() {
-    const { __v, _id, ...object } = this.toObject();
-    object.id = _id;
-    return object;
-  });
+
 
 const productsTbl = mongoose.model("productsTbl", productSchema);
 module.exports = productsTbl;
