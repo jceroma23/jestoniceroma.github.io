@@ -22,33 +22,19 @@ const displayAllCheckout = async (req, res) => {
 };
 
 //edit
-const editCheckout = async (req, res) => {
-  try {
-    const { status } = req.body;
-    const checkoutId = req.params.id;
+// PUT /checkout/:id
+const updateCheckoutStatus = (req, res, next) => {
+  const { id } = req.params;
+  const { status } = req.body;
 
-    // Validate the checkout ID
-    if (!mongoose.Types.ObjectId.isValid(checkoutId)) {
-      return res.status(400).json({ error: 'Invalid checkout ID' });
-    }
-
-    // Update the checkout document
-    const updatedCheckout = await orderCheckoutTbl.findByIdAndUpdate(
-      checkoutId,
-      { status },
-      { new: true }
-    );
-
-    if (!updatedCheckout) {
-      return res.status(404).json({ error: 'Checkout not found' });
-    }
-
-    res.status(200).json({ message: 'Checkout updated successfully', checkout: updatedCheckout });
-
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: 'Server error' });
-  }
+  orderCheckoutTbl.findByIdAndUpdate(id, { status }, { new: true })
+    .then(updatedCheckout => {
+      if (!updatedCheckout) {
+        return res.status(404).json({ message: `Checkout with id ${id} not found` });
+      }
+      res.json(updatedCheckout);
+    })
+    .catch(error => next(error));
 };
   //passing id thru local storage is not secure. but time is gold haha
   const createCheckout = async (req, res) => {
@@ -105,4 +91,4 @@ const editCheckout = async (req, res) => {
     }
   };
 
-  module.exports = { displayAllCheckout, createCheckout, deleteCheckout, editCheckout };
+  module.exports = { displayAllCheckout, createCheckout, deleteCheckout, updateCheckoutStatus };

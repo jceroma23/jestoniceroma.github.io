@@ -5,4 +5,5 @@ const orderController = require('../controller/orderController');
 
 router.get('/checkOut', orderController.displayAllCheckout);
 router.post('/createCheckOut', orderController.createCheckout);
+router.put('/saveCheckOut/:id', orderController.updateCheckoutStatus);
 module.exports = router;

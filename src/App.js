@@ -9,9 +9,8 @@ import UserDropdown from "./layouts/userDropDown.layout";
 import Userdashboard from "./pages/UserDashboard";
 import SellerPage from "./pages/sellerPage";
 import AddProductForm from "./components/productsCrud/addProducts";
-import Home from "./pages/Home";
-import About from "./pages/About";
-
+import Home from "./pages/home";
+import About from "./pages/about";
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Cart from "./components/cartComponents/cart.component";

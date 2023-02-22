@@ -1,7 +1,7 @@
-/* img {
+img {
     max-width: 300px;
     min-width: 150px;
-} */
+}
 
 .loginContainer {
     max-width: 350px;
@@ -28,3 +28,4 @@
     width: auto;
     height: 80px; 
 }
+

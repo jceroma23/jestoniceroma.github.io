@@ -24,6 +24,7 @@ const AddProductForm = () => {
       const response = await ProductDataService.createProduct(formData);
       console.log(response.data);
       window.alert('Product added successfully');
+      window.location.reload()
     } catch (error) {
       console.log(error);
       window.alert('Unable to add product');

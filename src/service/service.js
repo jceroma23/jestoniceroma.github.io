@@ -8,7 +8,8 @@ const ProductDataService = {
     createAccount: (data) => http.post("/signup", data),
     loginAccount: (data) => http.post("/login", data),
     createCheckOut: (data) => http.post("/createCheckOut", data),
-    displayAllCheckOut: (data) => http.get("/checkOut", data)
+    displayAllCheckOut: (data) => http.get("/checkOut", data),
+    updateCheckoutStatus: (checkoutId, status) => http.put(`/saveCheckOut/${checkoutId}`, { status })
     };
 
 export default ProductDataService;
