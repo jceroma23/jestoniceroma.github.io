@@ -58,9 +58,9 @@ function App() {
       <div className="container px-4 py-3 " style={{backgroundColor: "#f7cdcf", color: "black"}}>
         <div className="nav container  d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             
-            <a href="/" className="d-flex align-items-center my-2 my-lg-0 me-2" ><img className="logoStrawberryStreet" src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t1.15752-9/332286603_3522202774679554_5782596535844491874_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEh-RRGG8XcfOxyAPR4Iht1gMRsuymnK3OAxGy7KacrczOcE_-2VJTGPMEvEFYtXDw&_nc_ohc=fzx1YS58-kQAX-P6n3-&_nc_ht=scontent.fmnl8-2.fna&oh=03_AdRZ3E6Kxk_5gdB-fM9hrgL2nSWqxnEuzwkGEXimsBO1Xg&oe=641DD07C" alt="sslogo" /></a>
+            <a href="/home" className="d-flex align-items-center my-2 my-lg-0 me-2" ><img className="logoStrawberryStreet" src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t1.15752-9/332286603_3522202774679554_5782596535844491874_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEh-RRGG8XcfOxyAPR4Iht1gMRsuymnK3OAxGy7KacrczOcE_-2VJTGPMEvEFYtXDw&_nc_ohc=fzx1YS58-kQAX-P6n3-&_nc_ht=scontent.fmnl8-2.fna&oh=03_AdRZ3E6Kxk_5gdB-fM9hrgL2nSWqxnEuzwkGEXimsBO1Xg&oe=641DD07C" alt="sslogo" /></a>
            
-            <a href="/" className="d-flex align-items-center my-2 my-lg-0 me-lg-auto" ><img className="textStrawberryStreet" src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/332538355_586580670004156_5316165726462566570_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFNO8KmvROiD-EbMxjKZJOvZKsQvUOT1AlkqxC9Q5PUCX90I8OJ0Xo8VnNezcnWcjI&_nc_ohc=1da_3GBIc-0AX9nF3mF&tn=fUmH-YQ_Ufh6hXu7&_nc_ht=scontent.fmnl8-3.fna&oh=03_AdSoGuaDvgCM2ufZcHK_K_5fJncxX6uZpmjETUyrI5yu0g&oe=641DCDE4" alt="sstext" /></a>
+            <a href="/home" className="d-flex align-items-center my-2 my-lg-0 me-lg-auto" ><img className="textStrawberryStreet" src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/332538355_586580670004156_5316165726462566570_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFNO8KmvROiD-EbMxjKZJOvZKsQvUOT1AlkqxC9Q5PUCX90I8OJ0Xo8VnNezcnWcjI&_nc_ohc=1da_3GBIc-0AX9nF3mF&tn=fUmH-YQ_Ufh6hXu7&_nc_ht=scontent.fmnl8-3.fna&oh=03_AdSoGuaDvgCM2ufZcHK_K_5fJncxX6uZpmjETUyrI5yu0g&oe=641DCDE4" alt="sstext" /></a>
 
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
@@ -82,7 +82,7 @@ function App() {
             {loggedIn ? (
                 <UserDropdown userName={userName} handleLogout={handleLogout} />
               ) : (
-                <Link className="nav-link text-white" to="/login">Login</Link>
+                <Link className="nav-link text-white" to="/login">LOGIN</Link>
               )}
         </div>      
       </div>

@@ -53,8 +53,8 @@ const LogInComponent = () => {
               <input id="password" className="form-control mt-1" type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} />
             <div className="d-flex justify-content-evenly mt-3">
                 {error && <div>{error}</div>}
-              <button className="btn btn-secondary mt-3" type="submit">Log In</button>
-              <Link to="/signup" className="btn btn-secondary mt-3">Sign Up</Link>
+              <button className="btn mt-3" type="submit" style={{backgroundColor: "#e66aac", color: "white"}}>Log In</button>
+              <Link to="/signup" className="btn mt-3" style={{backgroundColor: "#e66aac", color: "white"}}>Sign Up</Link>
             </div>
           </form>
           

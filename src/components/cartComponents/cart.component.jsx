@@ -120,7 +120,7 @@ const CartModal = ({ onClose, show }) => {
                   <td>{item.quantity}</td>
                   <td>${getProduct(item.id)?.price?.$numberDecimal ?? ''}</td>
                   <td>
-                    <button className="btn btn-sm btn-danger" onClick={() => removeItem(item)}>Remove</button>
+                    <button className="btn btn-sm" onClick={() => removeItem(item)} style={{backgroundColor: "#e66aac", color: "white"}}>Remove</button>
                   </td>
                 </tr>
               ))}
@@ -131,9 +131,9 @@ const CartModal = ({ onClose, show }) => {
       )}
     </Modal.Body>
     <Modal.Footer>
-    <Button variant="secondary" onClick={onClose}>Close</Button>
+    <Button onClick={onClose} style={{backgroundColor: "#e66aac", color: "white"}}>Close</Button>
       {cartItems.length > 0 && (
-        <Button variant="primary" onClick={onCheckout}>Checkout</Button>
+        <Button onClick={onCheckout} style={{backgroundColor: "#e66aac", color: "white"}}>Checkout</Button>
       )}
     </Modal.Footer>
   </Modal>

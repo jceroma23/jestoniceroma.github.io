@@ -22,7 +22,7 @@ const Home = () => {
     }}>
       <h1 className='display-3'>Welcome to my Fashion Store</h1>
       <p className='display-6 text-center'>{randomQuote}</p>
-      <button className='w-25 btn btn-danger mt-5'>Shop Now</button>
+      <button className='w-25 btn mt-5' style={{backgroundColor: "#e66aac", color: "white"}}>Shop Now</button>
     </div>
     
   );

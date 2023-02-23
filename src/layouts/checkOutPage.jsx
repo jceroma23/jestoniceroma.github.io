@@ -74,7 +74,8 @@ const [checkouts, setCheckouts] = useState([]);
 </div>
           <p className='display-6'>Total: ${checkout.total.$numberDecimal}</p>
             <button 
-            className='btn btn-primary'
+            className='btn'
+            style={{backgroundColor: "#e66aac", color: "white"}}
             onClick={() => handleSave(checkout._id)}
             >
             Save
