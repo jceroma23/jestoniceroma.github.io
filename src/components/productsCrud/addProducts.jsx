@@ -52,7 +52,7 @@ const AddProductForm = () => {
         <textarea className='form-control'  id="description" name="description" value={formData.description} onChange={handleChange}  rows="4" cols="50"></textarea>
 
         <div>
-            <button className='mt-3 btn btn-primary' type="submit">Add Product</button>
+            <button className='mt-3 btn' type="submit" style={{backgroundColor: "#e66aac", color: "white"}}>Add Product</button>
         </div>
         </form>
     </div>

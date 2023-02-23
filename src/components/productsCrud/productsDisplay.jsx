@@ -71,10 +71,10 @@ const ProductsDisplay = () => {
             placeholder="Search by product name"
           />
         </div>
-        <Button type="submit" className="mr-2">
+        <Button className="me-2 mt-2" type="submit"  style={{backgroundColor: "#e66aac", color: "white"}}>
           Search
         </Button>
-        <Button onClick={handleReset}>Reset</Button>
+        <Button className="me-2 mt-2" onClick={handleReset} style={{backgroundColor: "#e66aac", color: "white"}}>Reset</Button>
       </form>
       <div className="container d-flex flex-wrap justify-content-center mt-5">
         {filteredProducts
@@ -87,7 +87,7 @@ const ProductsDisplay = () => {
                 <Card.Text>{product.description}</Card.Text>
                 <Card.Text>Price: ${product.price.$numberDecimal}</Card.Text>
                 <Rating name="read-only" value={product.rating} readOnly />
-                <Button variant="primary" onClick={() => setSelectedProduct(product)}>
+                <Button style={{backgroundColor: "#e66aac", color: "white"}} onClick={() => setSelectedProduct(product)}>
                   View
                 </Button>
               </Card.Body>

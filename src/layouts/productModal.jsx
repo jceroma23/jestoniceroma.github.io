@@ -47,10 +47,10 @@ const ProductModal = ({ product, onClose, productId}) => {
             </div>
           </Modal.Body>
           <Modal.Footer className="justify-content-between">
-            <Button variant="secondary" onClick={onClose}>
+            <Button onClick={onClose} style={{backgroundColor: "#e66aac", color: "white"}}>
               Close
             </Button>
-            <Button variant="primary" onClick={() => handleAddToCart(product._id, quantity)}>
+            <Button style={{backgroundColor: "#e66aac", color: "white"}}onClick={() => handleAddToCart(product._id, quantity)}>
               Add to cart
               {/* Need Funtion to trigger */}
             </Button>

@@ -84,7 +84,7 @@ const SignUpComponent = () => {
       
         <div className="d-flex justify-content-evenly mt-3">
            
-        <button className="btn btn-secondary mt-3" type="submit">Submit</button>
+        <button className="btn mt-3" type="submit" style={{backgroundColor: "#e66aac", color: "white"}}>Submit</button>
         </div>
     </form>
 
